@@ -1,0 +1,10 @@
+<!--This page selects shop in the application to proceed -->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+	<body>
+	
+		Book Catalog
+    	
+    </body>
+</html>

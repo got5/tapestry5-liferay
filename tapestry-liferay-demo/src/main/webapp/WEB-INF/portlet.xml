@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd">
+	<portlet>
+		<portlet-name>Index</portlet-name>
+		<portlet-class>org.apache.tapestry5.portlet.ApplicationPortlet</portlet-class>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Tapestry Porlet Index</title>
+			<short-title>T5 Portlet Index</short-title>
+			<keywords>Portlet Tapestry Integration</keywords>
+		</portlet-info>
+		<supported-processing-event>
+			<name>sampleEvent</name>
+		</supported-processing-event>
+		<supported-publishing-event>
+			<name>sampleEvent</name>
+		</supported-publishing-event>
+		<container-runtime-option>
+			<name>javax.portlet.renderHeaders</name>
+			<value>true</value>
+		</container-runtime-option>
+	</portlet>
+
+	<portlet>
+		<portlet-name>kawwa2/Catalog</portlet-name>
+		<portlet-class>org.apache.tapestry5.portlet.ApplicationPortlet</portlet-class>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Tapestry Porlet Catalog</title>
+			<short-title>T5 Portlet Catalog</short-title>
+			<keywords>Portlet Tapestry Catalog</keywords>
+		</portlet-info>
+		<supported-publishing-event>
+			<name>addToBasket</name>
+		</supported-publishing-event>
+		<container-runtime-option>
+			<name>javax.portlet.renderHeaders</name>
+			<value>true</value>
+		</container-runtime-option>
+	</portlet>
+	
+	<portlet>
+		<portlet-name>kawwa2/Basket</portlet-name>
+		<portlet-class>org.apache.tapestry5.portlet.ApplicationPortlet</portlet-class>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Tapestry Porlet Basket</title>
+			<short-title>T5 Portlet Basket</short-title>
+			<keywords>Portlet Tapestry Basket</keywords>
+		</portlet-info>
+		<supported-processing-event>
+			<name>addToBasket</name>
+		</supported-processing-event>
+		<container-runtime-option>
+			<name>javax.portlet.renderHeaders</name>
+			<value>true</value>
+		</container-runtime-option>
+	</portlet>
+	
+	<portlet>
+		<portlet-name>Index_jQuery</portlet-name>
+		<portlet-class>org.apache.tapestry5.portlet.ApplicationPortlet</portlet-class>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+			<portlet-mode>EDIT</portlet-mode>
+			<portlet-mode>HELP</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Index jQuery samples Portlet</title>
+			<short-title>Index jQuery samples Portlet</short-title>
+			<keywords>Index jQuery samples Portlet</keywords>
+		</portlet-info>
+		<portlet-preferences>
+			<preference>
+				<name>Index_jQuery</name>
+			</preference>
+		</portlet-preferences>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+		<supported-public-render-parameter>selectedUser</supported-public-render-parameter>
+		<container-runtime-option>
+			<name>javax.portlet.renderHeaders</name>
+			<value>true</value>
+		</container-runtime-option>
+	</portlet>
+	<portlet>
+		<portlet-name>jQueryTabs</portlet-name>
+		<portlet-class>org.apache.tapestry5.portlet.ApplicationPortlet</portlet-class>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+			<portlet-mode>EDIT</portlet-mode>
+			<portlet-mode>HELP</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>jQueryTabs Portlet</title>
+			<short-title>jQueryTabs Portlet</short-title>
+			<keywords>jQueryTabs Portlet</keywords>
+		</portlet-info>
+		
+		<portlet-preferences>
+			<preference>
+				<name>Grid</name>
+			</preference>
+		</portlet-preferences>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+		<supported-public-render-parameter>selectedUser</supported-public-render-parameter>
+		
+	</portlet>
+	<portlet>	
+		<portlet-name>Grid</portlet-name>
+		<portlet-class>org.apache.tapestry5.portlet.ApplicationPortlet</portlet-class>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+			<portlet-mode>EDIT</portlet-mode>
+			<portlet-mode>HELP</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Grid Portlet</title>
+			<short-title>Grid Portlet</short-title>
+			<keywords>Grid Portlet</keywords>
+		</portlet-info>
+		<portlet-preferences>
+			<preference>
+				<name>Grid</name>
+			</preference>
+		</portlet-preferences>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+		<supported-public-render-parameter>selectedUser</supported-public-render-parameter>
+		<container-runtime-option>
+			<name>javax.portlet.renderHeaders</name>
+			<value>true</value>
+		</container-runtime-option>
+	</portlet>
+	
+	<portlet>
+		<portlet-name>DataTable</portlet-name>
+		<portlet-class>org.apache.tapestry5.portlet.ApplicationPortlet</portlet-class>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+		</supports>
+		<supports>
+			<mime-type>image/png</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>DataTable Portlet</title>
+			<short-title>DataTable Portlet</short-title>
+			<keywords>DataTable Portlet</keywords>
+		</portlet-info>
+		<portlet-preferences>
+			<preference>
+				<name>Grid</name>
+			</preference>
+		</portlet-preferences>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+		<supported-public-render-parameter>renderParam</supported-public-render-parameter>
+		<container-runtime-option>
+			<name>javax.portlet.renderHeaders</name>
+			<value>true</value>
+		</container-runtime-option>
+	</portlet>
+	
+	<portlet>
+		<portlet-name>Droppable</portlet-name>
+		<portlet-class>org.apache.tapestry5.portlet.ApplicationPortlet</portlet-class>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+		</supports>
+		<supports>
+			<mime-type>image/png</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Droppable Portlet</title>
+			<short-title>Droppable Portlet</short-title>
+			<keywords>Droppable Portlet</keywords>
+		</portlet-info>
+		<portlet-preferences>
+			<preference>
+				<name>Droppable</name>
+			</preference>
+		</portlet-preferences>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+		<supported-public-render-parameter>renderParam</supported-public-render-parameter>
+		<container-runtime-option>
+			<name>javax.portlet.renderHeaders</name>
+			<value>true</value>
+		</container-runtime-option>
+	</portlet>
+	
+	<portlet>
+		<portlet-name>Draggable</portlet-name>
+		<portlet-class>org.apache.tapestry5.portlet.ApplicationPortlet</portlet-class>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+		</supports>
+		<supports>
+			<mime-type>image/png</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Draggable Portlet</title>
+			<short-title>Draggable Portlet</short-title>
+			<keywords>Draggable Portlet</keywords>
+		</portlet-info>
+		<portlet-preferences>
+			<preference>
+				<name>Draggable</name>
+			</preference>
+		</portlet-preferences>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+		<supported-public-render-parameter>renderParam</supported-public-render-parameter>
+		<container-runtime-option>
+			<name>javax.portlet.renderHeaders</name>
+			<value>true</value>
+		</container-runtime-option>
+	</portlet>
+	<portlet>
+		<portlet-name>HighCharts</portlet-name>
+		<portlet-class>org.apache.tapestry5.portlet.ApplicationPortlet</portlet-class>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+			<portlet-mode>EDIT</portlet-mode>
+			<portlet-mode>HELP</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>HighCharts Portlet</title>
+			<short-title>HighCharts Portlet</short-title>
+			<keywords>HighCharts Portlet</keywords>
+		</portlet-info>
+		
+		<portlet-preferences>
+			<preference>
+				<name>HighCharts</name>
+			</preference>
+		</portlet-preferences>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+		<container-runtime-option>
+			<name>javax.portlet.renderHeaders</name>
+			<value>true</value>
+		</container-runtime-option>
+	</portlet>
+	<portlet>
+		<portlet-name>AjaxFormLoopExample</portlet-name>
+		<portlet-class>org.apache.tapestry5.portlet.ApplicationPortlet</portlet-class>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+			<portlet-mode>EDIT</portlet-mode>
+			<portlet-mode>HELP</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>AjaxFormLoopExample Portlet</title>
+			<short-title>AjaxFormLoopExample Portlet</short-title>
+			<keywords>AjaxFormLoopExample Portlet</keywords>
+		</portlet-info>
+		
+		<portlet-preferences>
+			<preference>
+				<name>AjaxFormLoopExample</name>
+			</preference>
+		</portlet-preferences>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+		<container-runtime-option>
+			<name>javax.portlet.renderHeaders</name>
+			<value>true</value>
+		</container-runtime-option>
+	</portlet>
+	
+	<event-definition >
+		<name>addToBasket</name>
+		<value-type>java.lang.Long</value-type>
+	</event-definition>
+	
+
+	<!-- To allow inter-portlet communication we use public render parameter 
+		that is the easiest way to do it -->
+	<public-render-parameter>
+		<identifier>renderParam</identifier>
+		<qname xmlns:x="http://www.liferay.com/public-render-parameters">x:renderParam</qname>
+	</public-render-parameter>
+	
+
+	
+	
+</portlet-app>

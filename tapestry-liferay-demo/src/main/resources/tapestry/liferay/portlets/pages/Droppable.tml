@@ -1,0 +1,27 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+	<body>
+  
+    <h1>
+    	This is a example of the Droppable component. <br />
+    </h1>	
+    	
+  	<div t:type='zone'  t:id="dropzone" t:mixins='jquery/zonedroppable' id="toto">
+			Last zone Update:${now} <br/>
+	   		Last Drop:${data}
+	   		Last Event Raised
+	</div>
+    
+	 
+	<t:zone t:id="clickZone" visible="false">
+   		 	click OK
+   	</t:zone>
+    
+   	<div t:id="clickHere" t:type="any"  t:mixins="jquery/bind" 
+   			t:eventType="click" t:event="click" t:zone="${clickzone.clientid}">
+   			click test</div>
+	
+	</body>
+    
+</html>

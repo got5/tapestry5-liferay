@@ -1,0 +1,68 @@
+﻿<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.apache.tapestry</groupId>
+	<artifactId>tapestry5-portlet-globals</artifactId>
+	<version>5.3.3-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>Tapestry5 Liferay Parent</name>
+	<description>This projects aims to share specific tapestry5-portlet util for Liferay</description>
+	
+  <modules>
+	<module>tapestry-liferay</module>
+  </modules>
+
+     
+   <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-source-plugin</artifactId>
+		<version>2.1.2</version>
+		<executions>
+			<execution>
+				<id>attach-sources</id>
+				<goals>
+					<goal>jar</goal>
+				</goals>
+			</execution>
+		</executions>
+	</plugin> 
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>2.3.2</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+    </build>
+    
+    <repositories>
+		
+	</repositories>
+
+	<developers>
+		<developer>
+			<name>François Facon</name>
+			<id>ffacon</id>
+			<email>francois.facon@atos.net</email>
+			<organization>Atos Worldline</organization>
+			<organizationUrl>
+				http://www.atosworldline.com/
+			</organizationUrl>
+		</developer>
+		<developer>
+			<name>Emmanuel demey</name>
+			<id>edemet</id>
+			<email>Emmanuel.demey@atos.net</email>
+			<organization>Atos Worldline</organization>
+			<organizationUrl>
+				http://www.atosworldline.com/
+			</organizationUrl>
+		</developer>
+	</developers>
+    
+    
+</project>

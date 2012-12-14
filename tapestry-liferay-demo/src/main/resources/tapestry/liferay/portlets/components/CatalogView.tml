@@ -1,0 +1,20 @@
+<div class="k-catalog" >
+	<!-- example of catalog hproduct -->
+	<div class="k-product hproduct" t:type="loop" source="products" value="current">
+		<div class="photo-data">
+			<p><a href="#" title="See Product sheet">
+			<t:jquery.Draggable  t:draggablecontext="literal:${current.id}" >
+    			<img class="photo" src="${logoUrl}" alt="${current.title}" />
+			</t:jquery.Draggable>
+			</a>
+			</p>
+		</div>
+		<p class="extra new">new</p>
+		<h3 class="fn name"><a href="#" title="See Product sheet">${current.title}</a></h3>
+		<p class="rating two" title="2/5"><a href="#comments">50 comments</a></p>
+		<div class="price-data">
+			<p class="all-prices"><strong class="price new">${current.price} euros</strong></p>
+		</div>
+			<p class="buy"><t:eventlink t:event="publishAddToBasket" t:context="${current.id}">Add to basket Via PortletEvent</t:eventlink></p>
+		</div>
+</div>

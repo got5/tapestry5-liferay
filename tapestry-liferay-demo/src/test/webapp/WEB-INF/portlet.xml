@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd">
+
+	<portlet>
+		<description>AboutPortletDescription</description>
+		<portlet-name>AboutPortlet</portlet-name>
+		<display-name>About Portlet</display-name>
+		<portlet-class>org.apache.pluto.driver.portlets.AboutPortlet</portlet-class>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+			<portlet-mode>EDIT</portlet-mode>
+			<portlet-mode>HELP</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>About Apache Pluto</title>
+		</portlet-info>
+	</portlet>
+
+	<portlet>
+		<description>AdminPortletDescription</description>
+		<portlet-name>AdminPortlet</portlet-name>
+		<display-name>Admin Portlet</display-name>
+		<portlet-class>org.apache.pluto.driver.portlets.AdminPortlet</portlet-class>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+			<portlet-mode>EDIT</portlet-mode>
+			<portlet-mode>HELP</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Apache Pluto Portal Admin</title>
+		</portlet-info>
+	</portlet>
+
+	<portlet>
+		<description>Used to administer pluto pages</description>
+		<portlet-name>PlutoPageAdmin</portlet-name>
+		<display-name>Pluto Page Administration Portlet</display-name>
+		<portlet-class>org.apache.pluto.driver.portlets.PageAdminPortlet</portlet-class>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+			<portlet-mode>HELP</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Pluto Page Administrator</title>
+		</portlet-info>
+	</portlet>
+
+	<portlet>
+		<portlet-name>SelectShop</portlet-name>
+		<portlet-class>org.apache.tapestry5.portlet.ApplicationPortlet</portlet-class>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+			<portlet-mode>EDIT</portlet-mode>
+			<portlet-mode>HELP</portlet-mode>			
+		</supports>
+		<supports>
+			<mime-type>image/png</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>SelectShop Portlet</title>
+			<short-title>SelectShop Product</short-title>
+			<keywords>SelectShop Portlet</keywords>
+		</portlet-info>
+		<portlet-preferences>
+			<preference>
+				<name>defaultShop</name>
+			</preference>
+		</portlet-preferences>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+		<supported-public-render-parameter>selectedShop</supported-public-render-parameter>
+		<container-runtime-option>
+			<name>javax.portlet.renderHeaders</name>
+			<value>true</value>
+		</container-runtime-option>
+	</portlet>
+	<portlet>
+		<portlet-name>ContainerTree</portlet-name>
+		<portlet-class>org.apache.tapestry5.portlet.ApplicationPortlet</portlet-class>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+		</supports>
+		<supports>
+			<mime-type>image/png</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Catalog Tree</title>
+			<short-title>Catalog Tree</short-title>
+			<keywords>Catalog Tree</keywords>
+		</portlet-info>
+		<portlet-preferences>
+			<preference>
+				<name>defaultShop</name>
+			</preference>
+		</portlet-preferences>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+		<supported-public-render-parameter>selectedShop</supported-public-render-parameter>
+		<container-runtime-option>
+			<name>javax.portlet.renderHeaders</name>
+			<value>true</value>
+		</container-runtime-option>
+	</portlet>
+	<default-namespace>http://localhost:8080</default-namespace>
+	<!-- To allow inter-portlet communication we use public render parameter 
+		that is the easiest way to do it -->
+	<public-render-parameter>
+		<identifier>selectedShop</identifier>
+		<qname xmlns:x="http://www.liferay.com/public-render-parameters">x:selectedShop</qname>
+	</public-render-parameter>
+</portlet-app>

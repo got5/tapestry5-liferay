@@ -1,0 +1,22 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+	xmlns:p="tapestry:parameter">
+<!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
+
+<body>
+	<div t:type="zone"  t:id="basketZone" t:mixins='jquery/zonedroppable' id="basketZone">
+	<div class="k-basket k-panel" >
+	<h3 class="control ui-state-active" title="Click to fold/unfold block">
+		${nbItems} items in your basket</h3>
+		<div class="content" t:type="Loop" t:source="keys" t:value="currentKey">
+			<dl class="basket-item new-item">
+				<dt><a href="#" title="Go to the product sheet">
+				<img src="${logoUrl}" alt="Article" /></a></dt>
+				<dd class="name"><a href="#">${product.getTitle()} x ${nb}</a></dd>
+				<dd class="price">${product.getPrice()} &#8364;</dd>
+			</dl>
+			
+		</div>
+	</div>	
+	</div>
+</body>
+</html>

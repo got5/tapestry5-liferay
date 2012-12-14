@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" xmlns:p="tapestry:parameter">
+ 	 <body>
+    Grid Portlet
+	
+<t:jquery.tabs  t:listTabData="prop:listTabData" t:activePanelId="1" />
+
+
+	<t:block id="block1">
+
+		<h3>Panel 1</h3>
+		<hr/>
+
+		content from block 1
+
+	</t:block>
+
+	<t:block id="block2">
+
+		<h3>Panel 2</h3>
+		<hr/>	
+		
+		content from block 2
+
+	</t:block>
+
+	<t:block id="block3">
+
+		<h3>Panel 3</h3>
+		<hr/>
+
+		content from block 3
+
+	</t:block>
+
+
+	<t:block id="block4">
+
+		<h3>Panel 4</h3>
+		<hr/>
+		
+		content from block 4
+		<t:form>
+			<t:datefield value="sysDate"/>
+			<input type="submit"/>
+		</t:form>
+
+	</t:block>
+	
+	 </body>
+</html>

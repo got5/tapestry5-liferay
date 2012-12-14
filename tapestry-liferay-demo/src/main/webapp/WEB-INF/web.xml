@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+	version="2.4">
+	<display-name>Liferay Portlets in Tapestry</display-name>
+	
+	<context-param>
+		<!-- The only significant configuration for Tapestry 5, this informs Tapestry 
+			of where to look for pages, components and mixins. -->
+		<param-name>tapestry.app-package</param-name>
+		<param-value>tapestry.liferay.portlets</param-value>
+	</context-param>
+	
+	<context-param>
+		<!-- The only significant configuration for Tapestry 5, this informs Tapestry 
+			of where to look for pages, components and mixins. -->
+		<param-name>tapestry.combine-scripts</param-name>
+		<param-value>false</param-value>
+	</context-param>
+
+	<filter>
+		<filter-name>AdminPortlets</filter-name>
+		<filter-class>org.apache.tapestry5.TapestryFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>AdminPortlets</filter-name>
+		<url-pattern>/assets/*</url-pattern>
+	</filter-mapping>
+
+</web-app>
+      

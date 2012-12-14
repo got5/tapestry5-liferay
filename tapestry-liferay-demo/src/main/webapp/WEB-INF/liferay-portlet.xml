@@ -1,0 +1,184 @@
+<?xml version="1.0"?>
+<!DOCTYPE liferay-portlet-app PUBLIC "-//Liferay//DTD Portlet Application 5.2.0//EN" "http://www.liferay.com/dtd/liferay-portlet-app_5_2_0.dtd">
+
+<liferay-portlet-app>
+	<portlet>
+		<portlet-name>Index</portlet-name>
+
+		<!-- Enable container redirect-after-posts -->
+		<action-url-redirect>true</action-url-redirect>
+
+		<!-- Allows to add multiple instance for a portlet -->
+		<instanceable>true</instanceable>
+
+		<!-- Important, if true then all the js and css files will be in the body 
+			instead of the header -->
+		<private-request-attributes>false</private-request-attributes>
+	</portlet>
+
+	<portlet>
+		<portlet-name>kawwa2/Catalog</portlet-name>
+
+		<!-- Enable container redirect-after-posts -->
+		<action-url-redirect>true</action-url-redirect>
+
+		<!-- Allows to add multiple instance for a portlet -->
+		<instanceable>true</instanceable>
+
+		<!-- Important, if true then all the js and css files will be in the body 
+			instead of the header -->
+		<private-request-attributes>false</private-request-attributes>
+	</portlet>
+	
+	
+	<portlet>
+		<portlet-name>kawwa2/Basket</portlet-name>
+
+		<!-- Enable container redirect-after-posts -->
+		<action-url-redirect>true</action-url-redirect>
+
+		<!-- Allows to add multiple instance for a portlet -->
+		<instanceable>true</instanceable>
+
+		<!-- Important, if true then all the js and css files will be in the body 
+			instead of the header -->
+		<private-request-attributes>false</private-request-attributes>
+	</portlet>
+	
+	
+	
+	<portlet>
+		<portlet-name>jQueryTabs</portlet-name>
+
+		<!-- Enable container redirect-after-posts -->
+		<action-url-redirect>true</action-url-redirect>
+
+		<!-- Allows to add multiple instance for a portlet -->
+		<instanceable>true</instanceable>
+
+		<!-- Important, if true then all the js and css files will be in the body 
+			instead of the header -->
+		<private-request-attributes>false</private-request-attributes>
+	</portlet>
+	
+	<portlet>
+		<portlet-name>Grid</portlet-name>
+
+		<!-- Enable container redirect-after-posts -->
+		<action-url-redirect>true</action-url-redirect>
+
+		<!-- Allows to add multiple instance for a portlet -->
+		<instanceable>true</instanceable>
+
+		<!-- Important, if true then all the js and css files will be in the body 
+			instead of the header -->
+		<private-request-attributes>false</private-request-attributes>
+	</portlet>
+	
+	<portlet>
+		<portlet-name>HighCharts</portlet-name>
+
+		<!-- Enable container redirect-after-posts -->
+		<action-url-redirect>true</action-url-redirect>
+
+		<!-- Allows to add multiple instance for a portlet -->
+		<instanceable>true</instanceable>
+
+		<!-- Important, if true then all the js and css files will be in the body 
+			instead of the header -->
+		<private-request-attributes>false</private-request-attributes>
+	</portlet>
+	<portlet>
+		<portlet-name>DataTable</portlet-name>
+
+		<!-- Enable container redirect-after-posts -->
+		<action-url-redirect>true</action-url-redirect>
+
+		<!-- Allows to add multiple instance for a portlet -->
+		<instanceable>true</instanceable>
+
+		<!-- Important, if true then all the js and css files will be in the body 
+			instead of the header -->
+		<private-request-attributes>false</private-request-attributes>
+	</portlet>
+
+	<portlet>
+		<portlet-name>BookCatalog</portlet-name>
+
+		<!-- Enable container redirect-after-posts -->
+		<action-url-redirect>true</action-url-redirect>
+
+		<!-- Allows to add multiple instance for a portlet -->
+		<instanceable>true</instanceable>
+
+		<!-- Important, if true then all the js and css files will be in the body 
+			instead of the header -->
+		<private-request-attributes>false</private-request-attributes>
+				
+	</portlet>
+	
+	<portlet>
+		<portlet-name>Droppable</portlet-name>
+
+		<!-- Enable container redirect-after-posts -->
+		<action-url-redirect>true</action-url-redirect>
+
+		<!-- Allows to add multiple instance for a portlet -->
+		<instanceable>true</instanceable>
+
+		<!-- Important, if true then all the js and css files will be in the body 
+			instead of the header -->
+		<private-request-attributes>false</private-request-attributes>
+				
+	</portlet>
+
+	<portlet>
+		<portlet-name>Draggable</portlet-name>
+
+		<!-- Enable container redirect-after-posts -->
+		<action-url-redirect>true</action-url-redirect>
+
+		<!-- Allows to add multiple instance for a portlet -->
+		<instanceable>true</instanceable>
+
+		<!-- Important, if true then all the js and css files will be in the body 
+			instead of the header -->
+		<private-request-attributes>false</private-request-attributes>
+				
+	</portlet>
+	
+	<portlet>
+		<portlet-name>AjaxFormLoopExample</portlet-name>
+
+		<!-- Enable container redirect-after-posts -->
+		<action-url-redirect>true</action-url-redirect>
+
+		<!-- Allows to add multiple instance for a portlet -->
+		<instanceable>true</instanceable>
+
+		<!-- Important, if true then all the js and css files will be in the body 
+			instead of the header -->
+		<private-request-attributes>false</private-request-attributes>
+				
+	</portlet>
+
+	<role-mapper>
+		<role-name>administrator</role-name>
+		<role-link>Administrator</role-link>
+	</role-mapper>
+
+	<role-mapper>
+		<role-name>guest</role-name>
+		<role-link>Guest</role-link>
+	</role-mapper>
+
+	<role-mapper>
+		<role-name>power-user</role-name>
+		<role-link>Power User</role-link>
+	</role-mapper>
+
+	<role-mapper>
+		<role-name>user</role-name>
+		<role-link>User</role-link>
+	</role-mapper>
+</liferay-portlet-app>
