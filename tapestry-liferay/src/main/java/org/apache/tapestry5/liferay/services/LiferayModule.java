@@ -18,9 +18,12 @@ package org.apache.tapestry5.liferay.services;
 import org.apache.tapestry5.ioc.MappedConfiguration;
 import org.apache.tapestry5.ioc.ServiceBinder;
 import org.apache.tapestry5.ioc.annotations.Contribute;
+import org.apache.tapestry5.ioc.annotations.InjectService;
 import org.apache.tapestry5.ioc.annotations.Local;
+import org.apache.tapestry5.ioc.annotations.SubModule;
 import org.apache.tapestry5.ioc.services.ServiceOverride;
 import org.apache.tapestry5.portlet.internal.services.PortalUtilities;
+import org.apache.tapestry5.portlet.services.PortletModule;
 
 
 public final class LiferayModule
@@ -35,7 +38,8 @@ public final class LiferayModule
     @Contribute(ServiceOverride.class)
     public void contributeServiceOverride(
 			MappedConfiguration<Class, Object> configuration,
-			@Local PortalUtilities portalUtilitiesOverride)
+			@InjectService(value = "LiferayPortalUtilitiesOverride")
+			PortalUtilities portalUtilitiesOverride)
 
 	{
 		configuration.add(PortalUtilities.class, portalUtilitiesOverride);

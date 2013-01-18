@@ -6,25 +6,24 @@ import java.io.PrintWriter;
 
 import javax.portlet.ResourceResponse;
 
-
-
 import org.apache.tapestry5.portlet.internal.services.PortletResponseImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.liferay.portlet.ResourceResponseImpl;
+import com.liferay.portlet.ResourceResponseImpl; 
+
 
 public class LiferayResourceResponseImpl extends PortletResponseImpl
 {
 
     private final Logger _logger = LoggerFactory.getLogger(LiferayResourceResponseImpl.class);
 
-    private final ResourceResponseImpl _resourceResponse;
+    private final ResourceResponse _resourceResponse;
 
-    public LiferayResourceResponseImpl(ResourceResponseImpl resourceResponse)
+    public LiferayResourceResponseImpl(ResourceResponse response)
     {
-        super(resourceResponse, null);
-        _resourceResponse = resourceResponse;
+        super(response, null);
+        _resourceResponse =  response;
     }
 
     @Override
@@ -55,7 +54,8 @@ public class LiferayResourceResponseImpl extends PortletResponseImpl
     public void setHeader(String name, String value)
     {
         _logger.info("ResourceResponse Header: " + name + " " + value + " Class: " + _resourceResponse.getClass());
-        _resourceResponse.addHeader(name, value);
+        _resourceResponse.addProperty(name, value);
+        	
     }
     
 }

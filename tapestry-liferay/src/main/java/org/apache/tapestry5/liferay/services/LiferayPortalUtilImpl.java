@@ -31,6 +31,7 @@ import com.liferay.portal.kernel.servlet.PortletServlet;
 import com.liferay.portal.util.PortalUtil;
 import com.liferay.portlet.ResourceResponseImpl;
 
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -54,7 +55,7 @@ public class LiferayPortalUtilImpl implements PortalUtilities
 
     @Override
     public Response buildResourceReponse(ResourceResponse response) {
-    	return new LiferayResourceResponseImpl((ResourceResponseImpl)response);
+    	return new LiferayResourceResponseImpl(response);
 	}
     
 	public HttpServletRequest getOriginalServletRequest()
