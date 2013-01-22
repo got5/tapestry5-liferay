@@ -72,9 +72,9 @@
 			<portlet-mode>VIEW</portlet-mode>
 		</supports>
 		<portlet-info>
-			<title>Tapestry jQuery SuperFish Menu</title>
-			<short-title>T5 SuperFish Menu</short-title>
-			<keywords>Tapestry Menu</keywords>
+			<title>Tapestry5-jQuery Bind Portlet</title>
+			<short-title>T5 Bind Portlet</short-title>
+			<keywords>T5 Bind</keywords>
 		</portlet-info>
 		<container-runtime-option>
 			<name>javax.portlet.renderHeaders</name>

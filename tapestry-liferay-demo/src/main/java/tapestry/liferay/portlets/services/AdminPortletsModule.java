@@ -6,41 +6,24 @@ import org.apache.tapestry5.SymbolConstants;
 import org.apache.tapestry5.internal.grid.CollectionGridDataSource;
 import org.apache.tapestry5.ioc.Configuration;
 import org.apache.tapestry5.ioc.MappedConfiguration;
-import org.apache.tapestry5.ioc.ScopeConstants;
-import org.apache.tapestry5.ioc.ServiceBinder;
 import org.apache.tapestry5.ioc.internal.util.CollectionFactory;
 import org.apache.tapestry5.portlet.DeclaredResourceResponseSender;
-import org.apache.tapestry5.portlet.PortletPageResolver;
-import org.apache.tapestry5.portlet.internal.services.PortletActionRenderResponseGeneratorImpl;
-import org.apache.tapestry5.portlet.internal.services.PortletIdAllocatorFactoryImpl;
-import org.apache.tapestry5.portlet.internal.services.PortletLinkSourceImpl;
-import org.apache.tapestry5.portlet.internal.services.PortletPageResolverImpl;
-import org.apache.tapestry5.portlet.internal.services.PortletRequestGlobalsImpl;
-import org.apache.tapestry5.portlet.internal.services.PortletResourceResponseIdentifierImpl;
-import org.apache.tapestry5.portlet.services.PortletActionRenderResponseGenerator;
-import org.apache.tapestry5.portlet.services.PortletConfigProvider;
-import org.apache.tapestry5.portlet.services.PortletConfigProviderImpl;
-import org.apache.tapestry5.portlet.services.PortletIdAllocatorFactory;
-import org.apache.tapestry5.portlet.services.PortletLinkSource;
-import org.apache.tapestry5.portlet.services.PortletRequestGlobals;
-import org.apache.tapestry5.portlet.services.PortletResourceResponseIdentifier;
+
 import org.apache.tapestry5.services.ApplicationStateContribution;
 import org.apache.tapestry5.services.ApplicationStateCreator;
-import org.got5.tapestry5.jquery.JQuerySymbolConstants;
-import org.slf4j.Logger;
 import org.slf4j.Logger;
 
 import tapestry.liferay.portlets.data.kawwa2.BasketDetails;
 import tapestry.liferay.portlets.data.kawwa2.Product;
 
-import tapestry.liferay.portlets.data.kawwa2.BasketDetails;
-import tapestry.liferay.portlets.data.kawwa2.Product;
+import tapestry.liferay.portlets.pages.jquery.BindExample;
 
 public class AdminPortletsModule {
 
 	public static void contributeApplicationDefaults(MappedConfiguration<String, String> configuration) {
 		configuration.add(SymbolConstants.SUPPORTED_LOCALES, "en,fr,en_US");
 		configuration.add(SymbolConstants.PRODUCTION_MODE, "false");
+		configuration.add(SymbolConstants.APPLICATION_VERSION, "5.3.3-SNASPHOT");
 		//configuration.add(JQuerySymbolConstants.JQUERY_UI_DEFAULT_THEME, "classpath:tapestry/liferay/portlets/empty.css");
 	}
 	
@@ -51,14 +34,15 @@ public class AdminPortletsModule {
 		//tapestry-jQuery Bind delagate event to the page 
 		//so let allow all the event to be t
 		configuration.add(new DeclaredResourceResponseSender("tapestry.liferay.portlets.pages.Droppable",false));
+		DeclaredResourceResponseSender bindExample = new DeclaredResourceResponseSender(BindExample.class.getName());
+			bindExample.addEvent("bindEvent");
+		configuration.add(bindExample);
+
+		
 
     }	
 	
-	 /*public static void bind(ServiceBinder binder)
-	    {
-	        binder.bind(ProductCatalog.class, ProductCatalogImpl.class);
-	        
-	    }*/
+		
     public static ProductCatalog buildProductCatalog(Logger log)
     {
 

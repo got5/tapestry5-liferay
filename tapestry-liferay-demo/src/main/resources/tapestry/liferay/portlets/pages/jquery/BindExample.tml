@@ -1,0 +1,32 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+
+	<body>
+	
+		<t:zone t:id="messageZone" id="messageZone">
+			<p t:type="if" t:test="hasInfoMessage">
+				${infoMessage}
+			</p>
+		</t:zone>
+
+		<t:jquery.dialogajaxlink t:id="displayPopup" 
+					t:dialog="dialogPopupMessages"
+					t:zone="zonePopupMessages">
+		<button>say hello</button>
+</t:jquery.dialogajaxlink>
+
+<t:jquery.dialog t:clientid="dialogPopupMessages" t:params="jqueryParams">
+		
+		<t:zone t:id="zonePopupMessages" id="zonePopupMessages" t:visible="false">
+			<a t:type="any" t:mixins="jquery/bind" bind.event="bindEvent"
+					bind.eventType="click" bind.zone="zonePopupMessages"
+					bind.callback="function(){if(!confirm('do you really want to close this dialog ?')){e.stopPropagation();return false;}}">
+				<span id="btBindEvent" class="chat-detail-submit-button">Click me to close this dialog the message</span>
+			</a>
+		</t:zone>
+		
+	</t:jquery.dialog>
+	
+	</body>
+</html>
