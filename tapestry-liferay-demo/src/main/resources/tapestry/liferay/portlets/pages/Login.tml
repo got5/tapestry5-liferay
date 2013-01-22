@@ -1,0 +1,9 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+	xmlns:p="tapestry:parameter">
+	<body>
+		<div class="login">
+			<t:customer.loginform
+				t:login="login" t:password="password" />
+		</div>
+	</body>
+</html>

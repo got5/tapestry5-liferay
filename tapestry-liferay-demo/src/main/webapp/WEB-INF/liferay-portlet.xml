@@ -15,6 +15,19 @@
 			instead of the header -->
 		<private-request-attributes>false</private-request-attributes>
 	</portlet>
+	
+	<portlet>
+		<portlet-name>Login</portlet-name>
+
+
+		<!-- http://www.liferay.com/community/forums/-/message_boards/message/2904629 -->
+		<instanceable>true</instanceable>
+
+	
+		
+			
+		<private-session-attributes>false</private-session-attributes>
+	</portlet>
 
 	<portlet>
 		<portlet-name>kawwa2/Catalog</portlet-name>
@@ -45,7 +58,41 @@
 		<private-request-attributes>false</private-request-attributes>
 	</portlet>
 	
+	<portlet>
+		<portlet-name>jquery/SuperFish</portlet-name>
+
+		<!-- Enable container redirect-after-posts -->
+		<action-url-redirect>true</action-url-redirect>
+
+		<!-- Allows to add multiple instance for a portlet -->
+		<instanceable>true</instanceable>
+
+		<!-- Important, if true then all the js and css files will be in the body 
+			instead of the header -->
+		<private-request-attributes>false</private-request-attributes>
+		<system>true</system>
+		
+		
+		<!-- >header-portlet-css>/tapestry-liferay-demo/assets/ce2e5c07555c1218/jquery/assets/components/superfish/css/superfish.css</header-portlet-css>
+    	<header-portlet-javascript>/tapestry-liferay-demo/assets/ce2e5c07555c1218/jquery/assets/components/superfish/js/hoverIntent.js</header-portlet-javascript>
+    	<header-portlet-javascript>/tapestry-liferay-demo/assets/ce2e5c07555c1218/jquery/assets/components/superfish/js/superfish.js</header-portlet-javascript>
+		<header-portlet-javascript>/tapestry-liferay-demo/assets/ce2e5c07555c1218/jquery/assets/components/superfish/js/supersubs.js</header-portlet-javascript>
+    	<header-portlet-javascript>/tapestry-liferay-demo/assets/ce2e5c07555c1218/jquery/assets/components/superfish/js/mySuperfish.js</header-portlet-javascript-->
+	</portlet>
 	
+	<portlet>
+		<portlet-name>jquery/BindExample</portlet-name>
+
+		<!-- Enable container redirect-after-posts -->
+		<action-url-redirect>true</action-url-redirect>
+
+		<!-- Allows to add multiple instance for a portlet -->
+		<instanceable>true</instanceable>
+
+		<!-- Important, if true then all the js and css files will be in the body 
+			instead of the header -->
+		<private-request-attributes>false</private-request-attributes>
+	</portlet>
 	
 	<portlet>
 		<portlet-name>jQueryTabs</portlet-name>

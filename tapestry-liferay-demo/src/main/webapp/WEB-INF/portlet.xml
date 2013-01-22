@@ -25,6 +25,62 @@
 			<value>true</value>
 		</container-runtime-option>
 	</portlet>
+	
+	<portlet>
+		<portlet-name>Login</portlet-name>
+		<portlet-class>org.apache.tapestry5.portlet.ApplicationPortlet</portlet-class>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Tapestry Portlet Login</title>
+			<short-title>T5 Portlet Login</short-title>
+			<keywords>Portlet Tapestry Integration</keywords>
+		</portlet-info>
+		<container-runtime-option>
+			<name>javax.portlet.renderHeaders</name>
+			<value>true</value>
+		</container-runtime-option>
+	</portlet>
+
+	<portlet>
+		<portlet-name>jquery/SuperFish</portlet-name>
+		<portlet-class>org.apache.tapestry5.portlet.ApplicationPortlet</portlet-class>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Tapestry jQuery SuperFish Menu</title>
+			<short-title>T5 SuperFish Menu</short-title>
+			<keywords>Tapestry Menu</keywords>
+		</portlet-info>
+		<container-runtime-option>
+			<name>javax.portlet.renderHeaders</name>
+			<value>true</value>
+		</container-runtime-option>
+	
+		
+	</portlet>
+	
+	<portlet>
+		<portlet-name>jquery/BindExample</portlet-name>
+		<portlet-class>org.apache.tapestry5.portlet.ApplicationPortlet</portlet-class>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Tapestry jQuery SuperFish Menu</title>
+			<short-title>T5 SuperFish Menu</short-title>
+			<keywords>Tapestry Menu</keywords>
+		</portlet-info>
+		<container-runtime-option>
+			<name>javax.portlet.renderHeaders</name>
+			<value>true</value>
+		</container-runtime-option>
+	</portlet>
 
 	<portlet>
 		<portlet-name>kawwa2/Catalog</portlet-name>
