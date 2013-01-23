@@ -188,9 +188,9 @@
 			<portlet-mode>HELP</portlet-mode>
 		</supports>
 		<portlet-info>
-			<title>Grid Portlet</title>
-			<short-title>Grid Portlet</short-title>
-			<keywords>Grid Portlet</keywords>
+			<title>Tapestry5 Grid Portlet</title>
+			<short-title>T5 Grid Portlet</short-title>
+			<keywords>T5 Grid</keywords>
 		</portlet-info>
 		<portlet-preferences>
 			<preference>
