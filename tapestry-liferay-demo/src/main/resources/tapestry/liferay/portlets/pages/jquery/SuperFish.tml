@@ -1,12 +1,11 @@
-<html t:type="layout" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" xmlns:p="tapestry:parameter" xmlns:j="tapestry-library:jquery">
-	
-	
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" xmlns:p="tapestry:parameter" xmlns:j="tapestry-library:jquery">
+<body>	
 	<ul t:type="jquery/superfish" t:params="complexParams" t:clientId="menu1">
 		<li class="current"> 
 						<a href="#a">menu item</a> 
 						<ul> 
 							<li> 
-								<a href="#aa">menu item</a> 
+								<a href="#aa">What We DO item</a> 
 							</li> 
 							<li class="current"> 
 								<a href="#ab">menu item quite long</a> 
@@ -103,7 +102,7 @@
 					</li>	
 	</ul>
 	
-	
+</body>	
 </html>
 
   

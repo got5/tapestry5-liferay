@@ -36,5 +36,7 @@ public class FrontPortletConstants {
 	public static final String FINDER_RESULT = "FINDER_RESULT";
 
 	public static final String USER_COOKIEID = "USER_COOKIEID";
-
+	
+	public static final String GRID_PREF_ROWSPERPAGE = "grid.rowsperpage";
+	
 }
