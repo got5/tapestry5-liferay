@@ -2,5 +2,16 @@
       xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" 
       xmlns:p="tapestry:parameter"
       xmlns:j="tapestry-library:jquery">
-	    <h2>Select your favorite Grid</h2>
+	  		
+		<h1>Preferences for your Grid Portlet</h1>
+	    <t:form t:id="prefs">
+	    	<p>
+	    		<t:label t:for="rowsPerPage" />
+		    	<t:textfield t:id="rowsPerPage" t:value="rowsPerPage" validate="max=20,min=1" />
+	    	</p>
+	    	
+	    	<p>
+	    		<t:submit />
+	    	</p>
+	    </t:form>
 </html>

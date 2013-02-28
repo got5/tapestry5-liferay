@@ -19,6 +19,8 @@ package tapestry.liferay.portlets.pages;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.portlet.PortletRequest;
+
 import org.apache.tapestry5.ComponentResources;
 import org.apache.tapestry5.annotations.Import;
 import org.apache.tapestry5.annotations.InjectComponent;
@@ -34,7 +36,9 @@ import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.portlet.services.PortletRequestGlobals;
 import org.apache.tapestry5.services.BeanModelSource;
 import org.apache.tapestry5.services.Request;
+import org.apache.tapestry5.services.javascript.JavaScriptSupport;
 
+import tapestry.liferay.portlets.FrontPortletConstants;
 import tapestry.liferay.portlets.data.entities.User;
 
 
@@ -46,6 +50,8 @@ public class Grid
     
     @Property
     private int currentIndex;
+    
+    private int rowsPerPage;
     
     @Property
     @Persist
@@ -76,7 +82,8 @@ public class Grid
     
     @Inject
     private Request request;
-
+    
+ 	
     void setupRender() {
 
 		if (_myModel == null) {
@@ -87,9 +94,17 @@ public class Grid
 			_myModel.get("lastName").label("Surname");
 		}
 		users = createUsers(50);
+		
+		
 	}
 
 
+    public int getRowsPerPage(){
+    	PortletRequest portletRequest = (PortletRequest)globals.getPortletRequest();
+		rowsPerPage = Integer.valueOf(portletRequest.getPreferences().getValue(FrontPortletConstants.GRID_PREF_ROWSPERPAGE, "5"));
+		return rowsPerPage;
+    }
+    
     @OnEvent("serveDetail")
     Object onServeDetail(int index)
     {
