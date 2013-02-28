@@ -6,8 +6,11 @@ import org.apache.tapestry5.SymbolConstants;
 import org.apache.tapestry5.internal.grid.CollectionGridDataSource;
 import org.apache.tapestry5.ioc.Configuration;
 import org.apache.tapestry5.ioc.MappedConfiguration;
+import org.apache.tapestry5.ioc.annotations.SubModule;
 import org.apache.tapestry5.ioc.internal.util.CollectionFactory;
 import org.apache.tapestry5.portlet.DeclaredResourceResponseSender;
+import org.apache.tapestry5.portlet.services.PortletModule;
+import org.apache.tapestry5.portlet.upload.services.PortletUploadModule;
 
 import org.apache.tapestry5.services.ApplicationStateContribution;
 import org.apache.tapestry5.services.ApplicationStateCreator;
@@ -18,12 +21,18 @@ import tapestry.liferay.portlets.data.kawwa2.Product;
 
 import tapestry.liferay.portlets.pages.jquery.BindExample;
 
+import org.apache.tapestry5.portlet.services.PortletResourceRequestFilter;
+import org.apache.tapestry5.ioc.OrderedConfiguration;
+import org.got5.tapestry5.jquery.services.AjaxUploadDecoder;
+
+
+@SubModule({PortletUploadModule.class})
 public class AdminPortletsModule {
 
 	public static void contributeApplicationDefaults(MappedConfiguration<String, String> configuration) {
 		configuration.add(SymbolConstants.SUPPORTED_LOCALES, "en,fr,en_US");
 		configuration.add(SymbolConstants.PRODUCTION_MODE, "false");
-		configuration.add(SymbolConstants.APPLICATION_VERSION, "5.3.3");
+		configuration.add(SymbolConstants.APPLICATION_VERSION, "5.3.4-SNAPSHOT");
 		//configuration.add(JQuerySymbolConstants.JQUERY_UI_DEFAULT_THEME, "classpath:tapestry/liferay/portlets/empty.css");
 	}
 	
@@ -97,4 +106,13 @@ public class AdminPortletsModule {
     
       configuration.add(BasketDetails.class, new ApplicationStateContribution("session", creator));
     }
+    
+    public static void contributePortletResourceRequestHandler(OrderedConfiguration<PortletResourceRequestFilter> configuration,
+            final AjaxUploadDecoder ajaxUploadDecoder) {
+
+    	configuration.add("AjaxUploadPortletRequestFilter", new AjaxUploadPortletRequestFilter(ajaxUploadDecoder));
+    	
+    }
+
+    
 }

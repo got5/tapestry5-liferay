@@ -9,7 +9,8 @@
         <portlet id="kawwa2/Basket"></portlet>
         <portlet id="jquery/SuperFish"></portlet>
         <portlet id="jquery/BindExample"></portlet>
-        <portlet id="Grid"></portlet>
+        <portlet id="jquery/AjaxUploadTest"></portlet>
+	    <portlet id="Grid"></portlet>
 		<portlet id="jQueryTabs"></portlet>
         <portlet id="Index_jQuery"></portlet>
         <portlet id="Droppable"></portlet>

@@ -1,4 +1,4 @@
-// Copyright 2012 The Apache Software Foundation
+// Copyright 2012,2013 The Apache Software Foundation
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -21,8 +21,10 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.apache.tapestry5.portlet.PortletRenderable;
 import org.apache.tapestry5.portlet.internal.services.PortalUtilities;
+import org.apache.tapestry5.portlet.internal.services.PortletRequestImpl;
 import org.apache.tapestry5.portlet.internal.services.PortletResourceResponseImpl;
 import org.apache.tapestry5.portlet.services.PortletRequestGlobals;
+import org.apache.tapestry5.portlet.upload.internal.services.ActionRequestWrapper;
 import org.apache.tapestry5.services.Request;
 import org.apache.tapestry5.services.Response;
 import org.apache.tapestry5.services.SessionPersistedObjectAnalyzer;
@@ -50,7 +52,10 @@ public class LiferayPortalUtilImpl implements PortalUtilities
     @Override
 	public Request buildPortletRequest(PortletRequest request, String pageName, SessionPersistedObjectAnalyzer analyzer)
 	{
-		return  new LiferayRequestImpl(request,pageName, analyzer);
+    	if(request instanceof ActionRequestWrapper )// Upload Specifique
+    		return  new PortletRequestImpl(request,pageName, analyzer);
+		else
+			return  new LiferayRequestImpl(request,pageName, analyzer);
 	}
 
     @Override

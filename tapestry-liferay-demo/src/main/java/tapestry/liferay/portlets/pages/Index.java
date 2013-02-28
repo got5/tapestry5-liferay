@@ -4,11 +4,11 @@ import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.Serializable;
 import java.util.Date;
 
 import javax.portlet.Event;
 import javax.xml.namespace.QName;
+import com.liferay.portlet.EventImpl;
 
 import org.apache.tapestry5.ComponentResources;
 import org.apache.tapestry5.Link;
@@ -24,15 +24,17 @@ import org.apache.tapestry5.portlet.PortletRenderable;
 import org.apache.tapestry5.portlet.services.PortletRequestGlobals;
 import org.apache.tapestry5.services.Request;
 import org.apache.tapestry5.services.Response;
+import org.apache.tapestry5.upload.services.UploadedFile;
 
 
 /**
- * Start page of application tapestryportlet2.
+ * Portlet Index
  */
 public class Index
 {
 
-    @Inject
+    @SuppressWarnings("unused")
+	@Inject
     @Property
     private Request request;
 
@@ -45,15 +47,20 @@ public class Index
     @InjectComponent
     private Zone formResultZone;
 
-    @Property
+    @SuppressWarnings("unused")
+	@Property
     private String firstName;
 
-    @Property
+    @SuppressWarnings("unused")
+	@Property
     @Persist
     private String lastName;
 
     @Inject
     private LinkSource linkSource;
+    
+    @Property
+    private UploadedFile file;
 
     
     public String getWindowState()
@@ -79,10 +86,10 @@ public class Index
     	return renderable;
     }
 
-   /* public Event onPublishEvent()
+    public Event onPublishEvent()
     {
-        return new EventImpl(new QName("sampleEvent"), "sampleEvent");
-    }*/
+        return new EventImpl("sampleEvent", new QName("sampleEvent"), "sampleEvent value");
+    }
 
     public Object onSampleEvent(String event){
         globals.getEventResponse().setRenderParameter("lastEvent", event);
@@ -166,6 +173,13 @@ public class Index
     Object onSuccessFromFirstNameForm()
     {
         return formResultZone.getBody();
+    }
+    
+    public void onSuccessFromUploadForm() throws IOException
+    {
+        File copy = File.createTempFile(file.getFileName(), null);
+        System.out.println(copy.getPath());
+        file.write(copy);
     }
     
   

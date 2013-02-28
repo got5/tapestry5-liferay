@@ -67,7 +67,7 @@
 		</h2>
 		
 		<ul>
-			<li><t:eventlink t:event="publishEvent">Publish event</t:eventlink>: ${request.getParameter('lastEvent')}</li>
+			<li><t:eventlink t:event="PublishEvent">Publish event</t:eventlink>: ${request.getParameter('lastEvent')}</li>
 		</ul>
 		
 		<h2>
@@ -95,7 +95,11 @@
 		</form>
 		
 		
-		
+		<h3>Form upload</h3>
+		<form t:type="form" t:id="uploadForm">
+			<input t:type="upload" t:id="file" t:value="file" validate="required"/>
+			<t:submit />
+		</form>
 		
 		
 	</div>
