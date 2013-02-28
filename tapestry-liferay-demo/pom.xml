@@ -6,11 +6,11 @@
 	<groupId>tapestry.liferay</groupId>
 	<artifactId>tapestry-liferay-demo</artifactId>
 	<packaging>war</packaging>
-	<version>5.3.3</version>
+	<version>5.3.4-SNAPSHOT</version>
 	<parent>
 		   <groupId>org.apache.tapestry</groupId>
 		   <artifactId>tapestry5-portlet-globals</artifactId>
-		   <version>5.3.3</version>
+		   <version>5.3.4-SNAPSHOT</version>
 	</parent>
 	<name>Tapestry-Liferay-portlets Webapp</name>
 
@@ -32,7 +32,7 @@
 			<version>${tapestry-release-version}</version>
 		</dependency>
 
-		<dependency>
+		<!--  dependency>
 			<groupId>org.apache.tapestry</groupId>
 			<artifactId>tapestry-upload</artifactId>
 			<version>${tapestry-release-version}</version>
@@ -42,12 +42,12 @@
 					<groupId>commons-io</groupId>
 				</exclusion>
 			</exclusions>
-		</dependency>
+		</dependency-->
 
 		<dependency>
 				<groupId>org.apache.tapestry</groupId>
 				<artifactId>tapestry-liferay</artifactId>
-			<version>5.3.3</version>
+			<version>5.3.4-SNAPSHOT</version>
 		</dependency>
 		
 		<dependency>
@@ -63,6 +63,12 @@
 		</dependency-->
 		
 		<dependency>
+			<artifactId>commons-io</artifactId>
+			<groupId>commons-io</groupId>
+			<version>1.4</version>
+		</dependency>
+		
+		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>5.8</version>
@@ -76,6 +82,8 @@
 			<version>2.4</version>
 			<scope>test</scope>
 		</dependency>
+		
+		
 
 		<!-- Provided by the servlet container, but sometimes referenced in the 
 			application code. -->
