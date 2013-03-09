@@ -51,6 +51,12 @@
 		</dependency>
 		
 		<dependency>
+				<groupId>org.apache.tapestry</groupId>
+				<artifactId>tapestry5-portlet</artifactId>
+				<version>5.3.4-SNAPSHOT</version>
+		</dependency>
+		
+		<dependency>
 			<groupId>org.got5</groupId>
 			<artifactId>tapestry5-jquery</artifactId>
 			<version>3.3.3</version>
@@ -348,7 +354,7 @@
 	<properties>
 		<tapestry-release-version>5.3.6</tapestry-release-version>
 		<liferay.version>6.1.1</liferay.version>
-		<outputDirectory>D:/Liferay/liferay-portal-tomcat-6.1.1-ce-ga2-5.3/deploy</outputDirectory>
+		<outputDirectory>/Data/Dev/Liferay/liferay-portal-6.1.0-ce-ga1/deploy</outputDirectory>
 	</properties>
 
 </project>
