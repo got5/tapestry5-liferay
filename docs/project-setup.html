@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tapestry5 Portlet - New project setup</title>
+<link rel="stylesheet"
+	href="../../css/themes/default/jquery.mobile-1.2.0.css" />
+<link rel="stylesheet" href="../assets/css/jqm-docs.css" />
+
+<script src="../js/jquery.js"></script>
+<script src="../docs/_assets/js/jqm-docs.js"></script>
+<script src="../js/jquery.mobile-1.2.0.js"></script>
+
+</head>
+<body>
+
+	<div data-role="page" class="type-interior">
+
+		<div data-role="header" data-theme="f">
+			<h1>New project setup</h1>
+			<a href="../index.html" data-icon="home" data-iconpos="notext" data-direction="reverse">Home</a>
+		</div>
+		<!-- /header -->
+
+		<div data-role="content">
+
+			<div class="content-primary">
+				
+				<p>
+				Read this section if you need to create a new Liferay portlet project with Tapestry. 
+				</p>
+				
+				<h2>Creating a new Tapestry project</h2>
+				
+				<p>
+				First, create a new Tapestry project, by using the following maven command line:
+				</p>
+				
+<textarea readonly="readonly">	
+mvn archetype:generate -DarchetypeCatalog=http://tapestry.apache.org
+</textarea>
+				
+				<p>
+				You will be asked to define the following parameters:
+				</p>
+				
+				<li>
+				<i>Archetype Tapestry version</i>: Choose <i>1</i>, the Tapestry 5 Quickstart Project.
+				</li>
+				
+				<li>
+				<i>Tapestry version</i>: Choose the latest one, in our case <i>4</i> (Tapestry 5.3.6).
+				</li>
+				
+				<li>
+				A group Id, an artifact Id, a version and a package.
+				</li>
+				
+				<p>
+				You can now import the newly created project in Eclipse with <i>File</i> > <i>Import</i> > <i>Existing Maven Projects</i>.
+				</p>
+				
+				<h2>Setting project dependencies</h2>
+				
+				<p>
+				In the pom.xml file of your project, you will need to add the following dependencies:
+				</p>
+				
+				<li>
+				Tapestry Liferay library:
+				</li>
+				
+<textarea readonly="readonly">	
+<dependency>
+	<groupId>org.apache.tapestry</groupId>
+	<artifactId>tapestry-liferay</artifactId>
+	<version>5.3.4-SNAPSHOT</version>
+</dependency>
+</textarea>
+				
+				<p>
+				Check the following URL to get the last version of <i>tapestry-liferay</i>: <a href="https://github.com/got5/tapestry5-liferay">https://github.com/got5/tapestry5-liferay</a>.
+				</p>
+				
+				<li>
+				Optionnal: you could add <i>tapestry5-jquery</i> library if you want to use <i>JQuery</i> and a bunch of new components. See <a href="https://github.com/got5/tapestry5-jquery">https://github.com/got5/tapestry5-jquery</a> for more informations.
+				</li>
+				
+<textarea readonly="readonly">
+<dependency>
+	<groupId>org.got5</groupId>
+	<artifactId>tapestry5-jquery</artifactId>
+	<version>3.3.6-SNAPSHOT</version>
+</dependency>
+</textarea>
+				
+				<h2>Editing WEB-INF XML configuration files</h2>
+				
+				<p>
+				Add these three files in your WEB-INF folder. 
+				</p>
+				
+				<p>
+				<li>
+				<i>portlet.xml</i>: 
+				</li>
+				</p>
+				
+				<p>
+				In this file are listed all the portlets of your application.
+				</p>
+<textarea readonly="readonly">
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd">
+	<portlet>
+		<portlet-name>TapestryPortlet</portlet-name>
+		<display-name>TapestryPortlet</display-name>
+		<portlet-class>org.apache.tapestry5.portlet.ApplicationPortlet</portlet-class>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+			<portlet-mode>EDIT</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Portlet Tapestry</title>
+			<short-title>Portlet Tapestry</short-title>
+			<keywords>tapestry portlet</keywords>
+		</portlet-info>
+		<container-runtime-option>
+			<name>javax.portlet.renderHeaders</name>
+			<value>true</value>
+		</container-runtime-option>
+	</portlet>
+</portlet-app>
+</textarea>
+				<p>
+				There are a few things you need to know when you create a Tapestry portlet. 
+				</p>
+				<p>
+				First, <i>portlet-class</i> value will ALWAYS be <i>org.apache.tapestry5.portlet.ApplicationPortlet</i>. 
+				</p>
+				<p>
+				You define the page linked to the portlet with the  <i>portlet-name</i> attribute. This is the page name, as registered in Tapestry. In the example below, the <i>AjaxFormLoopExample.tml</i> portlet name will be <i>AjaxFormLoopExample</i>. <i>Catalog.tml</i> name will be <i><b>kawwa2/</b>Catalog</i>.
+				</p>
+				
+				<p align="center">
+					<img src="assets/images/portlet-name.png"/>
+				</p>
+				
+				<li>
+				<i>liferay-portlet.xml</i>
+				</li>
+				</p>
+				<p>
+				As many portlet implementors, Liferay Portal has its own features and behaviours. The <i>liferay-portlet.xml</i> file allows you to configure those. In case of Tapestry portlet integration, you will have to specify some of them to integrate well with Tapestry. Have a look at the snippet below:
+				</p>
+<textarea readonly="readonly">
+<?xml version="1.0"?>
+<!DOCTYPE liferay-portlet-app PUBLIC "-//Liferay//DTD Portlet Application 5.2.0//EN" "http://www.liferay.com/dtd/liferay-portlet-app_5_2_0.dtd">
+<liferay-portlet-app>
+  <portlet>
+    <portlet-name>TapestryPortlet</portlet-name>
+    <action-url-redirect>true</action-url-redirect>
+    <instanceable>true</instanceable>
+    <private-request-attributes>false</private-request-attributes>
+  </portlet>
+</liferay-portlet-app>
+</textarea>
+				<p>
+				Every portlet declared in the <i>portlet.xml</i> must match one element in this document. Also the <i>portlet-name</i> must match a corresponding portlet in <i>portlet.xml</i>.
+				</p>
+				
+				<p>
+				Set the <i>action-url-redirect</i> to true, this is important to enable the redirect-after-post behaviour. By default, Liferay will not redirect the user after an action request but will simply launch render request in the same thread. This behaviour is not consistent with Tapestry's design because it can lead to double-submit problem on page refresh.
+				</p>
+				
+				<p>
+				Set the <i>instanceable</i> to true if you need to instantiate the portlet more than once per page.
+				</p>
+
+				<p>
+				Important: set the <i>private-request-attributes</i> to false will allow the portlet to share request attributes with others.This will allow us to handle JS and CSS includes properly within the portal page "head" part. Without this property set to false, you may have duplicate resources in the body of the containing portal page.
+				</p>
+				
+				<p>
+				<li>
+				<i>liferay-display.xml</i>: 
+				</li>
+				</p>
+				
+				<p>
+				Display informations for your portlets are found in this file. It makes it possible for users to add portlets via the personalize pages screen.
+				</p>
+				
+<textarea readonly="readonly">
+<?xml version="1.0"?>
+<!DOCTYPE display PUBLIC "-//Liferay//DTD Display 6.1.0//EN" "http://www.liferay.com/dtd/liferay-display_6_1_0.dtd">
+<display>
+ 	<category name="Portlet Category">
+ 		<portlet id="TapestryPortlet" />
+ 	</category>
+</display>
+</textarea>
+				
+				<p align="center">
+					<img src="assets/images/liferay_add_portlet_menu.png" />
+				</p>
+				
+				<p>
+				Portlet id refers to <i>portlet.xml</i> <i><portlet-name></i> attribute. Display title is set in <i>portlet.xml</i> file, with the <i>portlet-info/title</i> attribute.
+				</p>
+			
+			</div>
+
+			<div class="content-secondary">
+
+				<img src="assets/images/tapestry.png"
+					alt="Portlet Bridge for Tapestry" />
+
+				<div data-role="collapsible" data-collapsed="true" data-theme="b"
+					data-content-theme="d">
+
+					<ul data-role="listview" data-theme="c" data-dividertheme="d">
+						<li data-role="list-divider">Overview</li>
+						<li><a href="environment-setup.html">Environment
+								setup</a></li>
+						<li data-theme="a"><a href="project-setup.html">New project setup</a></li>
+						<li><a href="debugging-application.html">Debugging your
+								application</a></li>
+						<li><a href="testing-portlets.html">Testing your
+								portlets</a></li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+		<!-- /content -->
+
+		<div data-role="footer" class="footer-docs" data-theme="c">
+			<p class="jqm-version"></p>
+			<p>&copy; 2012 jQuery Foundation and other contributors</p>
+		</div>
+
+
+
+	</div>
+	<!-- /page -->
+
+</body>
+</html>

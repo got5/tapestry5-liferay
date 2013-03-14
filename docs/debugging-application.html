@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tapestry5 Portlet - Debugging your application</title>
+<link rel="stylesheet"
+	href="../../css/themes/default/jquery.mobile-1.2.0.css" />
+<link rel="stylesheet" href="../assets/css/jqm-docs.css" />
+
+<script src="../js/jquery.js"></script>
+<script src="../docs/_assets/js/jqm-docs.js"></script>
+<script src="../js/jquery.mobile-1.2.0.js"></script>
+
+</head>
+<body>
+
+	<div data-role="page" class="type-interior">
+
+		<div data-role="header" data-theme="f">
+			<h1>Debugging your application</h1>
+			<a href="../index.html" data-icon="home" data-iconpos="notext" data-direction="reverse">Home</a>
+		</div>
+		<!-- /header -->
+
+		<div data-role="content">
+
+			<div class="content-primary">
+				
+				<h2>Application Auto Deploy</h2>
+				
+				<p>
+				By default, Liferay has a very interesting feature: it contains several classes that implement <i>com.liferay.portal.kernel.deploy.auto.AutoDeployListener</i>, which are used to process the auto deployment of wars.
+				</p>
+				
+				<p>
+				The directory used to scan for layout templates, portlets and themes to auto deploy is defined in the <i>${liferay.home}/portal-ide.properties</i> file:
+				</p>
+				
+<textarea readonly="readonly">
+auto.deploy.enabled=true
+auto.deploy.deploy.dir=${liferay.home}/deploy
+</textarea>
+				
+				<p>
+				Default value is <i>${liferay.home}/deploy</i>, but you could use instead the <i>target</i> directory of your project. This way, by building your application, the generated war will be automatically deployed (if your liferay application server is started, of course).
+				</p>
+				
+				<p>
+				WARNING: if you start your application server in Eclipse (with the <i>Servers</i> view), you have to set this value in your IDE (double click on the server, and edit the <i>Auto deploy path</i> value. Every time you launch the server with Eclipse, it generates a new <i>portal-ide.properties</i> file which overrides the one in your <i>${liferay.home}</i> directory.
+				</p>
+				
+				<p align="center">
+					<img src="assets/images/auto-deploy-path.png"/>
+				</p>
+				
+				<h2>Debugging your application</h2>
+				
+				<p>
+				In order to debug your application, you only have to launch your application server in Eclipse in debug mode (<i>Servers</i> view, right click on the server, and <i>Debug</i>).
+				</p>
+				
+				<p>
+				You do not have to stop/launch the server every time you make a modification in your code. Just build your project, and Liferay will redeploy it automatically.
+				</p>
+				
+			
+			</div>
+
+			<div class="content-secondary">
+
+				<img src="assets/images/tapestry.png"
+					alt="Portlet Bridge for Tapestry" />
+
+				<div data-role="collapsible" data-collapsed="true" data-theme="b"
+					data-content-theme="d">
+
+					<ul data-role="listview" data-theme="c" data-dividertheme="d">
+						<li data-role="list-divider">Overview</li>
+						<li><a href="environment-setup.html">Environment
+								setup</a></li>
+						<li><a href="project-setup.html">New project setup</a></li>
+						<li data-theme="a"><a href="debugging-application.html">Debugging your
+								application</a></li>
+						<li><a href="testing-portlets.html">Testing your
+								portlets</a></li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+		<!-- /content -->
+
+		<div data-role="footer" class="footer-docs" data-theme="c">
+			<p class="jqm-version"></p>
+			<p>&copy; 2012 jQuery Foundation and other contributors</p>
+		</div>
+
+
+
+	</div>
+	<!-- /page -->
+
+</body>
+</html>
