@@ -4,7 +4,6 @@ import java.util.Calendar;
 import java.util.Random;
 
 import javax.portlet.PortletPreferences;
-import javax.portlet.PortletRequest;
 
 import org.apache.tapestry5.annotations.AfterRender;
 import org.apache.tapestry5.annotations.Import;

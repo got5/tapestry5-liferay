@@ -1,9 +1,23 @@
 <?xml version="1.0"?>
-<!DOCTYPE liferay-portlet-app PUBLIC "-//Liferay//DTD Portlet Application 5.2.0//EN" "http://www.liferay.com/dtd/liferay-portlet-app_5_2_0.dtd">
+<!DOCTYPE liferay-portlet-app PUBLIC "-//Liferay//DTD Portlet Application 6.1.0//EN" "http://www.liferay.com/dtd/liferay-portlet-app_6_1_0.dtd">
 
 <liferay-portlet-app>
 	<portlet>
 		<portlet-name>Index</portlet-name>
+
+		<!-- Enable container redirect-after-posts -->
+		<action-url-redirect>true</action-url-redirect>
+
+		<!-- Allows to add multiple instance for a portlet -->
+		<instanceable>true</instanceable>
+
+		<!-- Important, if true then all the js and css files will be in the body 
+			instead of the header -->
+		<private-request-attributes>false</private-request-attributes>
+	</portlet>
+	
+	<portlet>
+		<portlet-name>ActionPage</portlet-name>
 
 		<!-- Enable container redirect-after-posts -->
 		<action-url-redirect>true</action-url-redirect>
@@ -152,8 +166,11 @@
 	<portlet>
 		<portlet-name>DataTable</portlet-name>
 
+			
 		<!-- Enable container redirect-after-posts -->
 		<action-url-redirect>true</action-url-redirect>
+
+		<layout-cacheable>true</layout-cacheable>
 
 		<!-- Allows to add multiple instance for a portlet -->
 		<instanceable>true</instanceable>
@@ -161,6 +178,8 @@
 		<!-- Important, if true then all the js and css files will be in the body 
 			instead of the header -->
 		<private-request-attributes>false</private-request-attributes>
+		
+		
 	</portlet>
 
 	<portlet>

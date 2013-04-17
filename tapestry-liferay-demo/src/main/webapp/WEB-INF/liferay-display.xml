@@ -4,6 +4,7 @@
 <display>
 	<category name="Tapestry Liferay Demo">
 		<portlet id="Index"></portlet>
+		<portlet id="ActionPage"></portlet>
 		<portlet id="Login"></portlet>
 		<portlet id="kawwa2/Catalog"></portlet>
         <portlet id="kawwa2/Basket"></portlet>
@@ -16,6 +17,7 @@
         <portlet id="Droppable"></portlet>
         <portlet id="Draggable"></portlet>
         <portlet id="HighCharts"></portlet>
+        <portlet id="DataTable"></portlet>
         <portlet id="AjaxFormLoopExample"></portlet>
 	</category>
 </display>

@@ -1,10 +1,13 @@
 package tapestry.liferay.portlets.pages.kawwa2;
 
 import java.util.List;
-import javax.portlet.Event;
 import org.apache.tapestry5.annotations.Property;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.services.AssetSource;
+
+import javax.portlet.Event;
+import com.liferay.portlet.EventImpl;
+
 import tapestry.liferay.portlets.data.kawwa2.Product;
 import tapestry.liferay.portlets.services.ProductCatalog;
 
@@ -27,9 +30,9 @@ public class Catalog {
 		return as.getContextAsset(current.getAssetLocation(), null).toClientURL();
 	}
 	
-	/*public Event onPublishAddToBasket(Long productId){
-	        return new PortletEventImpl("addToBasket",null, productId);
-	}*/
+	public Event onPublishAddToBasket(Long productId){
+	        return (Event)new EventImpl("addToBasket",null, productId);
+	}
 	 	 
 	 
 	

@@ -16,6 +16,8 @@ import org.apache.tapestry5.services.ApplicationStateContribution;
 import org.apache.tapestry5.services.ApplicationStateCreator;
 import org.slf4j.Logger;
 
+import tapestry.liferay.portlets.data.Celebrity.IDataSource;
+import tapestry.liferay.portlets.data.Celebrity.MockDataSource;
 import tapestry.liferay.portlets.data.kawwa2.BasketDetails;
 import tapestry.liferay.portlets.data.kawwa2.Product;
 
@@ -104,8 +106,16 @@ public class AdminPortletsModule {
         }
       };
     
+      ApplicationStateCreator<IDataSource> creator2 = new ApplicationStateCreator<IDataSource>() {
+			public IDataSource create() {
+				return new MockDataSource();
+			}
+		};
+
+	  configuration.add(IDataSource.class, new ApplicationStateContribution("session", creator2));
       configuration.add(BasketDetails.class, new ApplicationStateContribution("session", creator));
     }
+    
     
     public static void contributePortletResourceRequestHandler(OrderedConfiguration<PortletResourceRequestFilter> configuration,
             final AjaxUploadDecoder ajaxUploadDecoder) {

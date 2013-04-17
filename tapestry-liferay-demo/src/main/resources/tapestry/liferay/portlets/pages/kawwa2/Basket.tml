@@ -1,8 +1,9 @@
-<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
 	xmlns:p="tapestry:parameter">
 <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
 
 <body>
+	<h1>Your Basket</h1>
 	<div t:type="zone"  t:id="basketZone" t:mixins='jquery/zonedroppable' id="basketZone">
 	<div class="k-basket k-panel" >
 	<h3 class="control ui-state-active" title="Click to fold/unfold block">

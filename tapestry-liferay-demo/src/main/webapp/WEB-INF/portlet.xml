@@ -43,6 +43,27 @@
 			<value>true</value>
 		</container-runtime-option>
 	</portlet>
+	
+	
+	<portlet>
+		<portlet-name>ActionPage</portlet-name>
+		<portlet-class>org.apache.tapestry5.portlet.ApplicationPortlet</portlet-class>
+		<expiration-cache>60</expiration-cache>
+   		<cache-scope>private</cache-scope>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Tapestry Portlet ActionPage</title>
+			<short-title>T5 Portlet ActionPage</short-title>
+			<keywords>Portlet Tapestry ActionPage</keywords>
+		</portlet-info>
+		<container-runtime-option>
+			<name>javax.portlet.renderHeaders</name>
+			<value>true</value>
+		</container-runtime-option>
+	</portlet>
 
 	<portlet>
 		<portlet-name>jquery/SuperFish</portlet-name>
@@ -228,6 +249,8 @@
 	<portlet>
 		<portlet-name>DataTable</portlet-name>
 		<portlet-class>org.apache.tapestry5.portlet.ApplicationPortlet</portlet-class>
+		<expiration-cache>60</expiration-cache>
+		<cache-scope>private</cache-scope>
 		<supports>
 			<mime-type>text/html</mime-type>
 			<portlet-mode>VIEW</portlet-mode>

@@ -19,6 +19,7 @@ import java.util.List;
 import javax.portlet.PortletRequest;
 
 import org.apache.tapestry5.portlet.internal.services.PortletRequestImpl;
+import org.apache.tapestry5.portlet.upload.internal.services.ActionRequestWrapper;
 import org.apache.tapestry5.services.SessionPersistedObjectAnalyzer;
 
 import com.liferay.portal.kernel.portlet.LiferayPortletRequest;

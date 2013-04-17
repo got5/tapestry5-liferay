@@ -7,11 +7,11 @@
 				value="%d %-5p [%t] %C{2} (%F:%L) - %m%n" />
 		</layout>
 	</appender>
-	<category name="tapestry">
-		<priority value="INFO" />
+	<category name="tapestry.liferay.portlets.pages" additivity="false">
+		<priority value="DEBUG" />
 		<appender-ref ref="STDOUT" />
 	</category>
-	<category name="org.apache.tapestry5">
+	<category name="org.apache.tapestry5" additivity="false">
 		<priority value="INFO" />
 		<appender-ref ref="STDOUT" />
 	</category>
@@ -20,7 +20,6 @@
 		<appender-ref ref="STDOUT" />
 	</category>
 	<root>
-		<!-- change the value to INFO to get more log -->
 		<priority value="INFO" />
 		<appender-ref ref="STDOUT" />
 	</root>
