@@ -215,8 +215,8 @@
 			<role-name>user</role-name>
 		</security-role-ref>
 		<supported-public-render-parameter>selectedUser</supported-public-render-parameter>
-		
 	</portlet>
+	
 	<portlet>	
 		<portlet-name>Grid</portlet-name>
 		<portlet-class>org.apache.tapestry5.portlet.ApplicationPortlet</portlet-class>
@@ -340,6 +340,38 @@
 			<value>true</value>
 		</container-runtime-option>
 	</portlet>
+	
+	<portlet>
+		<portlet-name>Cache</portlet-name>
+		<portlet-class>org.apache.tapestry5.portlet.ApplicationPortlet</portlet-class>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+		</supports>
+		<supports>
+			<mime-type>image/png</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Cache Portlet</title>
+			<short-title>Cache Portlet</short-title>
+			<keywords>Cache Portlet</keywords>
+		</portlet-info>
+		<portlet-preferences>
+			<preference>
+				<name>Cache</name>
+			</preference>
+		</portlet-preferences>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+		<supported-public-render-parameter>renderParam</supported-public-render-parameter>
+		<container-runtime-option>
+			<name>javax.portlet.renderHeaders</name>
+			<value>true</value>
+		</container-runtime-option>
+	</portlet>
+	
 	<portlet>
 		<portlet-name>HighCharts</portlet-name>
 		<portlet-class>org.apache.tapestry5.portlet.ApplicationPortlet</portlet-class>

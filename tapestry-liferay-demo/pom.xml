@@ -31,6 +31,12 @@
 			<artifactId>tapestry-json</artifactId>
 			<version>${tapestry-release-version}</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>uk.co.ioko</groupId>
+			<artifactId>tapestry-caching</artifactId>
+			<version>3.6.1</version>
+		</dependency>
 
 		<!--  dependency>
 			<groupId>org.apache.tapestry</groupId>

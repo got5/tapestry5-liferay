@@ -1,0 +1,28 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+	xmlns:p="tapestry:parameter">
+
+<body>
+	<h1><i>cache/Container</i> component sample :</h1>
+	
+	<p>
+	This component provides caching of the generated HTML for a page snippet in EHCache.
+	</p>
+	
+	<h2>Render duration for 500 ActionLinks : </h2>
+	<hr/>
+	<div t:type="ActionLinkLoop" t:nbElements="500"></div>
+	
+	<h3>Code snippet:</h3>
+	<pre>
+		<code>
+			${codeSnippet}
+		</code>
+	</pre>
+	Do not forget the dependency to <i>tapestry-caching</i> library in your <i>pom.xml</i>:
+	<pre>
+		<code>
+			${pomDependency}
+		</code>
+	</pre>
+</body>
+</html>

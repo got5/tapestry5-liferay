@@ -16,6 +16,7 @@
         <portlet id="Index_jQuery"></portlet>
         <portlet id="Droppable"></portlet>
         <portlet id="Draggable"></portlet>
+        <portlet id="Cache"></portlet>
         <portlet id="HighCharts"></portlet>
         <portlet id="DataTable"></portlet>
         <portlet id="AjaxFormLoopExample"></portlet>
