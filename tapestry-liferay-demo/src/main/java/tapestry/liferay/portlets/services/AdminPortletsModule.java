@@ -9,6 +9,7 @@ import org.apache.tapestry5.ioc.MappedConfiguration;
 import org.apache.tapestry5.ioc.annotations.SubModule;
 import org.apache.tapestry5.ioc.internal.util.CollectionFactory;
 import org.apache.tapestry5.portlet.DeclaredResourceResponseSender;
+import org.apache.tapestry5.portlet.PortletPersistenceConstants;
 import org.apache.tapestry5.portlet.services.PortletModule;
 import org.apache.tapestry5.portlet.upload.services.PortletUploadModule;
 
@@ -113,7 +114,7 @@ public class AdminPortletsModule {
 		};
 
 	  configuration.add(IDataSource.class, new ApplicationStateContribution("session", creator2));
-      configuration.add(BasketDetails.class, new ApplicationStateContribution("session", creator));
+      configuration.add(BasketDetails.class, new ApplicationStateContribution(PortletPersistenceConstants.PORTLET_SESSION_APPLICATION_SCOPE, creator));
     }
     
     

@@ -17,6 +17,7 @@
 		</div>
 		<p class="extra new">new</p>
 		<h3 class="fn name"><a href="#" title="See Product sheet">${current.title}</a></h3>
+		${nbProductsInBasket} in your cart.
 		<p class="rating two" title="2/5"><a href="#comments">50 comments</a></p>
 		<div class="price-data">
 			<p class="all-prices">
@@ -25,8 +26,12 @@
 		</div>
 			<p class="buy">
 				<t:eventlink t:event="publishAddToBasket" t:context="${current.id}">
-					Add to basket Via PortletEvent
+					Add to basket (PortletEvent)
 				</t:eventlink></p>
+				<br/>
+				<a t:type="actionLink" t:id="linkAddBasket" t:context="${current.id}">
+					Add to basket (SessionState)
+				</a>
 		</div>
 		
 	</div>

@@ -22,7 +22,9 @@ public class Basket
     @SessionState
     private BasketDetails shoppingBasket;
 
-    //handler for portletEvent addTobasket
+    /**
+     * Handler for portletEvent addTobasket.
+     */
     public Object onAddToBasket(Long productId)
     {
        shoppingBasket.addToBasket(productId);

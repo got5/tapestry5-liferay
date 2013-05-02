@@ -6,80 +6,57 @@
 	<groupId>tapestry.liferay</groupId>
 	<artifactId>tapestry-liferay-demo</artifactId>
 	<packaging>war</packaging>
-	<version>5.3.4-SNAPSHOT</version>
 	<parent>
-		   <groupId>org.apache.tapestry</groupId>
-		   <artifactId>tapestry5-portlet-globals</artifactId>
-		   <version>5.3.4-SNAPSHOT</version>
+		<groupId>org.apache.tapestry</groupId>
+		<artifactId>tapestry5-portlet-globals</artifactId>
+		<version>5.3.4-SNAPSHOT</version>
 	</parent>
 	<name>Tapestry-Liferay-portlets Webapp</name>
 
 	<dependencies>
-		 <dependency>
+		<dependency>
 			<groupId>org.apache.tapestry</groupId>
 			<artifactId>tapestry-core</artifactId>
 			<version>${tapestry-release-version}</version>
 		</dependency>
-	    <dependency>
-			<groupId>org.apache.tapestry</groupId>
-			<artifactId>tapestry-ioc</artifactId>
-			<version>${tapestry-release-version}</version>
-		</dependency>
-	
+
 		<dependency>
 			<groupId>org.apache.tapestry</groupId>
 			<artifactId>tapestry-json</artifactId>
 			<version>${tapestry-release-version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>uk.co.ioko</groupId>
 			<artifactId>tapestry-caching</artifactId>
 			<version>3.6.1</version>
 		</dependency>
 
-		<!--  dependency>
-			<groupId>org.apache.tapestry</groupId>
-			<artifactId>tapestry-upload</artifactId>
-			<version>${tapestry-release-version}</version>
-			<exclusions>
-				<exclusion>
-					<artifactId>commons-io</artifactId>
-					<groupId>commons-io</groupId>
-				</exclusion>
-			</exclusions>
-		</dependency-->
+		<!-- dependency> <groupId>org.apache.tapestry</groupId> <artifactId>tapestry-upload</artifactId> 
+			<version>${tapestry-release-version}</version> <exclusions> <exclusion> <artifactId>commons-io</artifactId> 
+			<groupId>commons-io</groupId> </exclusion> </exclusions> </dependency -->
 
 		<dependency>
-				<groupId>org.apache.tapestry</groupId>
-				<artifactId>tapestry-liferay</artifactId>
+			<groupId>org.apache.tapestry</groupId>
+			<artifactId>tapestry-liferay</artifactId>
 			<version>5.3.4-SNAPSHOT</version>
 		</dependency>
-		
-		<dependency>
-				<groupId>org.apache.tapestry</groupId>
-				<artifactId>tapestry5-portlet</artifactId>
-				<version>5.3.4-SNAPSHOT</version>
-		</dependency>
-		
+
 		<dependency>
 			<groupId>org.got5</groupId>
 			<artifactId>tapestry5-jquery</artifactId>
-			<version>3.3.3</version>
+			<version>3.3.6-SNAPSHOT</version>
 		</dependency>
-			
-		<!--  dependency>
-			<groupId>org.got5</groupId>
-			<artifactId>tapestry5-highcharts</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
-		</dependency-->
-		
+
+		<!-- dependency> <groupId>org.got5</groupId> <artifactId>tapestry5-highcharts</artifactId> 
+			<version>1.0.0-SNAPSHOT</version> </dependency -->
+
 		<dependency>
 			<artifactId>commons-io</artifactId>
 			<groupId>commons-io</groupId>
 			<version>1.4</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
@@ -94,8 +71,8 @@
 			<version>2.4</version>
 			<scope>test</scope>
 		</dependency>
-		
-		
+
+
 
 		<!-- Provided by the servlet container, but sometimes referenced in the 
 			application code. -->
@@ -162,40 +139,39 @@
 		</dependency>
 
 		<!-- Liferay dependencies -->
-			<dependency>
-				<groupId>com.liferay.portal</groupId>
-				<artifactId>portal-impl</artifactId>
-				<version>${liferay.version}</version>
-				<scope>provided</scope>
-			</dependency>	
-			
-			<dependency>
-				<groupId>com.liferay.portal</groupId>
-				<artifactId>portal-service</artifactId>
-				<version>${liferay.version}</version>
-				<scope>provided</scope>
-			</dependency>
+		<dependency>
+			<groupId>com.liferay.portal</groupId>
+			<artifactId>portal-impl</artifactId>
+			<version>${liferay.version}</version>
+		</dependency>
 
-			<dependency>
-				<groupId>com.liferay.portal</groupId>
-				<artifactId>util-bridges</artifactId>
-				<version>${liferay.version}</version>
-				<scope>provided</scope>
-			</dependency>
+		<dependency>
+			<groupId>com.liferay.portal</groupId>
+			<artifactId>portal-service</artifactId>
+			<version>${liferay.version}</version>
+			<scope>provided</scope>
+		</dependency>
 
-			<dependency>
-				<groupId>com.liferay.portal</groupId>
-				<artifactId>util-taglib</artifactId>
-				<version>${liferay.version}</version>
-				<scope>provided</scope>
-			</dependency>
+		<dependency>
+			<groupId>com.liferay.portal</groupId>
+			<artifactId>util-bridges</artifactId>
+			<version>${liferay.version}</version>
+			<scope>provided</scope>
+		</dependency>
 
-			<dependency>
-				<groupId>com.liferay.portal</groupId>
-				<artifactId>util-java</artifactId>
-				<version>${liferay.version}</version>
-				<scope>provided</scope>
-			</dependency>
+		<dependency>
+			<groupId>com.liferay.portal</groupId>
+			<artifactId>util-taglib</artifactId>
+			<version>${liferay.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.liferay.portal</groupId>
+			<artifactId>util-java</artifactId>
+			<version>${liferay.version}</version>
+			<scope>provided</scope>
+		</dependency>
 
 	</dependencies>
 
@@ -346,15 +322,15 @@
 	</build>
 
 	<repositories>
-		
-	    <repository>
-	        <id>devlab722-repo snapshot</id>
-	        <url>http://nexus.devlab722.net/nexus/content/repositories/snapshots
+
+		<repository>
+			<id>devlab722-repo snapshot</id>
+			<url>http://nexus.devlab722.net/nexus/content/repositories/snapshots
 	        </url>
-	        <snapshots>
-	            <enabled>true</enabled>
-	        </snapshots>
-	    </repository>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
 	</repositories>
 
 	<properties>
