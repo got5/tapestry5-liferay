@@ -9,7 +9,7 @@
 	<parent>
 		<groupId>org.apache.tapestry</groupId>
 		<artifactId>tapestry5-portlet-globals</artifactId>
-		<version>5.3.4-SNAPSHOT</version>
+		<version>${global.version}</version>
 	</parent>
 	<name>Tapestry-Liferay-portlets Webapp</name>
 
@@ -39,13 +39,13 @@
 		<dependency>
 			<groupId>org.apache.tapestry</groupId>
 			<artifactId>tapestry-liferay</artifactId>
-			<version>5.3.4-SNAPSHOT</version>
+			<version>${global.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.got5</groupId>
 			<artifactId>tapestry5-jquery</artifactId>
-			<version>3.3.6-SNAPSHOT</version>
+			<version>3.3.6</version>
 		</dependency>
 
 		<!-- dependency> <groupId>org.got5</groupId> <artifactId>tapestry5-highcharts</artifactId> 
@@ -329,6 +329,15 @@
 	        </url>
 			<snapshots>
 				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		
+		<repository>
+			<id>devlab722-repo releases</id>
+			<url>http://nexus.devlab722.net/nexus/content/repositories/releasess
+	        </url>
+			<snapshots>
+				<enabled>false</enabled>
 			</snapshots>
 		</repository>
 	</repositories>
