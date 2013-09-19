@@ -5,11 +5,10 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.apache.tapestry</groupId>
 	<artifactId>tapestry-liferay</artifactId>
-	<version>${global.version}</version>
 	<parent>
 		   <groupId>org.apache.tapestry</groupId>
 		   <artifactId>tapestry5-portlet-globals</artifactId>
-		   <version>${global.version}</version>
+		   <version>5.3.4</version>
 	</parent>
 	<name>Tapestry5 Portlet 2.0 Liferay helpers</name>
 	<dependencies>
@@ -53,14 +52,7 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- tapestry-test will conflict with RunJettyRun inside Eclipse. tapestry-test 
-			brings in Selenium, which is based on Jetty 5.1; RunJettyRun uses Jetty 6. -->
-		<dependency> 
-			<groupId>org.apache.tapestry</groupId> 
-			<artifactId>tapestry-test</artifactId> 
-			<version>${tapestry-release-version}</version> 
-			<scope>test</scope> 
-		</dependency> 
+		
 
 		<!-- Provided by the servlet container, but sometimes referenced in the 
 			application code. -->
@@ -215,6 +207,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
+				
 				<configuration>
 					<archive>
 						<manifestEntries>
@@ -610,6 +603,7 @@
 </profiles>
 
 	<properties>
+		<global.version>5.3.4</global.version>
 		<tapestry-release-version>5.3.6</tapestry-release-version>
 		<pluto.version>2.0.2</pluto.version>
 		<liferay.version>6.1.1</liferay.version>
