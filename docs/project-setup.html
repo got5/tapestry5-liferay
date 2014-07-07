@@ -184,6 +184,14 @@ mvn archetype:generate -DarchetypeCatalog=http://tapestry.apache.org
 				<p>
 				Important: set the <i>private-request-attributes</i> to false will allow the portlet to share request attributes with others.This will allow us to handle JS and CSS includes properly within the portal page "head" part. Without this property set to false, you may have duplicate resources in the body of the containing portal page.
 				</p>
+
+				<p>
+				Important: If you are using liferay 6.2 or greater, <i>private-request-attributes</i> is not enough to share request attributes, you also need to set the <i>requires-namespaced-parameters</i> to false. Remember also that old DTD will not support this tag, so you also need: <br />
+				<i>
+					&lt;!DOCTYPE liferay-portlet-app PUBLIC 
+						"-//Liferay//DTD Portlet Application 6.2.0//EN" "http://www.liferay.com/dtd/liferay-portlet-app_6_2_0.dtd"&gt;
+				</i>
+				</p>				
 				
 				<p>
 				<li>
