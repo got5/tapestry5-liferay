@@ -14,7 +14,9 @@
 // limitations under the License.
 //
 
-package tapestry.liferay.portlets.pages.jquery;
+package tapestry.liferay.portlets.pages.jquery.ext;
+
+import tapestry.liferay.portlets.pages.jquery.Autocomplete;
 
 public class JQueryAutocomplete extends Autocomplete
 {
