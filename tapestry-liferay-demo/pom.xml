@@ -9,7 +9,7 @@
 	<parent>
 		<groupId>org.apache.tapestry</groupId>
 		<artifactId>tapestry5-portlet-globals</artifactId>
-		<version>5.3.5</version>
+		<version>5.4-beta-22</version>
 	</parent>
 	<name>Tapestry-Liferay-portlets Webapp</name>
 
@@ -26,11 +26,11 @@
 			<version>${tapestry-release-version}</version>
 		</dependency>
 
-		<dependency>
+		<!--  dependency>
 			<groupId>uk.co.ioko</groupId>
 			<artifactId>tapestry-caching</artifactId>
 			<version>3.6.1</version>
-		</dependency>
+		</dependency -->
 
 		<!-- dependency> <groupId>org.apache.tapestry</groupId> <artifactId>tapestry-upload</artifactId> 
 			<version>${tapestry-release-version}</version> <exclusions> <exclusion> <artifactId>commons-io</artifactId> 
@@ -45,7 +45,7 @@
 		<dependency>
 			<groupId>org.got5</groupId>
 			<artifactId>tapestry5-jquery</artifactId>
-			<version>3.3.6</version>
+			<version>4.0.1-SNAPSHOT</version>
 		</dependency>
 
 		<!-- dependency> <groupId>org.got5</groupId> <artifactId>tapestry5-highcharts</artifactId> 
@@ -55,6 +55,12 @@
 			<artifactId>commons-io</artifactId>
 			<groupId>commons-io</groupId>
 			<version>1.4</version>
+		</dependency>
+
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.0.3</version>
 		</dependency>
 
 		<dependency>
@@ -343,10 +349,10 @@
 	</repositories>
 
 	<properties>
-		<global.version>5.3.5</global.version>
-		<tapestry-release-version>5.3.7</tapestry-release-version>
-		<liferay.version>6.1.1</liferay.version>
-		<outputDirectory>/Data/Dev/Liferay/liferay-portal-6.1.0-ce-ga1/deploy</outputDirectory>
+		<global.version>5.4-beta-22</global.version>
+		<tapestry-release-version>5.4-beta-22</tapestry-release-version>
+		<liferay.version>6.1.2</liferay.version>
+		<outputDirectory>C:/Liferay/6.1.2/6.1.2-ce-ga3/deploy</outputDirectory>
 	</properties>
 
 </project>

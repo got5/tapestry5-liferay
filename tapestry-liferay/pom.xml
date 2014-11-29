@@ -8,7 +8,7 @@
 	<parent>
 		   <groupId>org.apache.tapestry</groupId>
 		   <artifactId>tapestry5-portlet-globals</artifactId>
-		   <version>5.3.5</version>
+		   <version>5.4-beta-22</version>
 	</parent>
 	<name>Tapestry5 Portlet 2.0 Liferay helpers</name>
 	<dependencies>
@@ -603,12 +603,12 @@
 </profiles>
 
 	<properties>
-		<global.version>5.3.5</global.version>
-		<tapestry-release-version>5.3.7</tapestry-release-version>
+		<global.version>5.4-beta-22</global.version>
+		<tapestry-release-version>5.4-beta-22</tapestry-release-version>
 		<pluto.version>2.0.2</pluto.version>
 		<liferay.version>6.1.1</liferay.version>
-		<liferay.home.dir>D:/Liferay/liferay-portal-tomcat-6.1.1ga2-5.3</liferay.home.dir>
-		<liferay.tomcat.version>tomcat-7.0.27</liferay.tomcat.version>
+		<liferay.home.dir>C:/Liferay/6.1.2/6.1.2-ce-ga3</liferay.home.dir>
+		<liferay.tomcat.version>tomcat-7.0.40</liferay.tomcat.version>
 		<liferay.port>8080</liferay.port>
 		<selenium.firefox.binary>C:/Program Files (x86)/FF13/firefox.exe</selenium.firefox.binary>
 		<jetty-version>7.0.0.v20091005</jetty-version>
