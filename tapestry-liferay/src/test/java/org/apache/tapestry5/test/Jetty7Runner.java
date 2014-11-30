@@ -19,7 +19,7 @@ import java.io.File;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.ssl.SslSelectChannelConnector;
 import org.eclipse.jetty.webapp.WebAppContext;
-import org.apache.tapestry5.test.TapestryTestConstants;
+
 
 
 /**
@@ -52,11 +52,11 @@ public class Jetty7Runner
         webapp.setContextPath(contextPath);
         webapp.setWar(expandedPath);
    
-        File desc = new File(TapestryTestConstants.MODULE_BASE_DIR, "src/main/webapp/WEB-INF/plugin-web-testng.xml");
+        File desc = new File(TapestryRunnerConstants.MODULE_BASE_DIR, "src/main/webapp/WEB-INF/plugin-web-testng.xml");
         webapp.setDescriptor(desc.getAbsolutePath());
      
         // SSL support
-        File keystoreFile = new File(TapestryTestConstants.MODULE_BASE_DIR, "src/test/conf/keystore");
+        File keystoreFile = new File(TapestryRunnerConstants.MODULE_BASE_DIR, "src/test/conf/keystore");
 
         if (keystoreFile.exists())
         {
@@ -119,6 +119,6 @@ public class Jetty7Runner
         if(path.isAbsolute() && path.isDirectory())
             return moduleLocalPath;
         
-        return new File(TapestryTestConstants.MODULE_BASE_DIR, moduleLocalPath).getPath();
+        return new File(TapestryRunnerConstants.MODULE_BASE_DIR, moduleLocalPath).getPath();
     }
 }
