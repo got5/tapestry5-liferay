@@ -14,7 +14,7 @@ import org.apache.tapestry5.corelib.components.Zone;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.services.javascript.JavaScriptSupport;
 
-import uk.co.ioko.tapestry.caching.services.TimerService;
+//import uk.co.ioko.tapestry.caching.services.TimerService;
 
 public class ActionLinkLoop {
 	
@@ -25,8 +25,8 @@ public class ActionLinkLoop {
 	@Property
 	private int currentActionLinkIndex;
 	
-	@Inject
-	private TimerService timerService;
+	//@Inject
+	//private TimerService timerService;
 	
 	@Inject
 	private JavaScriptSupport js;
@@ -36,24 +36,24 @@ public class ActionLinkLoop {
 	
 	@SetupRender
 	public void setUpRender() {
-		timerService.start("Begin ActionLinkLoop render");
+		//timerService.start("Begin ActionLinkLoop render");
 	}
 	
 	@CleanupRender
 	public void cleanupRender() {
-		timerService.saveState("End ActionLinkLoop render");
+		//timerService.saveState("End ActionLinkLoop render");
 		
 		String result = "";
 		if (nonCacheRenderDuration == null) {
 			result = "Refresh current page to get cached render duration.";
-			nonCacheRenderDuration = String.valueOf(timerService.getCurrentTime());
+			//nonCacheRenderDuration = String.valueOf(timerService.getCurrentTime());
 		}
 		else
 		{
 			result = "Non-cached render duration was " + nonCacheRenderDuration + " ms.";
 		}
-		js.addScript("document.getElementById('divResult').innerHTML = \"Links have been rendered in <b>" + timerService.getCurrentTime() + "</b> ms. " + result + "\";");
+		//js.addScript("document.getElementById('divResult').innerHTML = \"Links have been rendered in <b>" + timerService.getCurrentTime() + "</b> ms. " + result + "\";");
 		
-		timerService.stop();
+		//timerService.stop();
 	}
 }
