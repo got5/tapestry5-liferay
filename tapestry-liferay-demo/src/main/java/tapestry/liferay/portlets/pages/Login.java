@@ -10,7 +10,7 @@ import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpServletRequestWrapper;
 
 
-import org.apache.log4j.Logger;
+
 import org.apache.tapestry5.ValidationTracker;
 import org.apache.tapestry5.annotations.Environmental;
 import org.apache.tapestry5.annotations.OnEvent;
@@ -19,6 +19,7 @@ import org.apache.tapestry5.annotations.Property;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.portlet.PortalPage;
 import org.apache.tapestry5.portlet.services.PortletRequestGlobals;
+import org.slf4j.Logger;
 
 import tapestry.liferay.portlets.FrontEventsConstants;
 
@@ -71,7 +72,9 @@ public class Login {
 	
 	private static final String NAMESPACE_SERVLET_REQUEST_FQCN = "com.liferay.portal.servlet.NamespaceServletRequest";
 
-	private static Logger logger = Logger.getLogger(Login.class);
+	
+	@Inject
+	private Logger logger;
 	
 	
 	@OnEvent(value = FrontEventsConstants.LOGIN_FORM_VALIDATE)
@@ -140,7 +143,7 @@ public class Login {
 			feedbackMessageId = "authentication-failed";
 		}
 		catch (Exception e) {
-			logger.error(e);
+			logger.error(e.toString());
 		}
 		
 		//to see the session invalidation effect
@@ -177,7 +180,7 @@ public class Login {
 				
 			}
 			catch (Exception e) {
-				logger.error(e);
+				logger.error(e.toString());
 				return this;
 			
 			}
