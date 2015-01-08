@@ -35,7 +35,7 @@ public class AdminPortletsModule {
 	public static void contributeApplicationDefaults(MappedConfiguration<String, String> configuration) {
 		configuration.add(SymbolConstants.SUPPORTED_LOCALES, "en,fr,en_US");
 		configuration.add(SymbolConstants.PRODUCTION_MODE, "false");
-		configuration.add(SymbolConstants.APPLICATION_VERSION, "5.3.4-SNAPSHOT");
+		configuration.add(SymbolConstants.APPLICATION_VERSION, "5.3.6");
 		//configuration.add(JQuerySymbolConstants.JQUERY_UI_DEFAULT_THEME, "classpath:tapestry/liferay/portlets/empty.css");
 	}
 	
