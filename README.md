@@ -1,11 +1,7 @@
-# Tapestry 5 Portlet extension for Liferay - 5.3.7.0
-
-## List Of Contributors
-- François FACON as got5,ffacon     
-- Emmanuel DEMEY as Gillespie59
-- 
+# Tapestry 5 Portlet extension for Liferay - 5.3.8.0
 
 ## Changelog
+- 5.3.8.0 : Release for Tapestry 5.3.8 & Tapestry-portlet 5.3.8.0
 - 5.3.7.0 : Release for Tapestry 5.3.7 & Tapestry-portlet 5.3.7.0
 - 5.3.6 : Release for Tapestry 5.3.7 & Tapestry-portlet 5.3.6
 - 5.3.5 : Release for Tapestry 5.3.7 & Tapestry-portlet 5.3.5
@@ -16,3 +12,8 @@
 ## License
 
 This project is distributed under Apache 2 License. See LICENSE.txt for more information. 
+
+
+## List Of Contributors
+- François FACON as got5,ffacon     
+- Wroblewski Laurent as LWroblewski 
