@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.apache.tapestry</groupId>
 	<artifactId>tapestry5-portlet-globals</artifactId>
-	<version>5.4-beta-26</version>
+	<version>5.4-beta-35</version>
 	<packaging>pom</packaging>
 	<name>Tapestry5 Liferay Parent</name>
 	<description>This projects aims to share specific tapestry5-portlet util for Liferay</description>
