@@ -9,7 +9,7 @@
 	<parent>
 		<groupId>org.apache.tapestry</groupId>
 		<artifactId>tapestry5-portlet-globals</artifactId>
-		<version>5.4-beta-26</version>
+		<version>5.4-beta-35</version>
 	</parent>
 	<name>Tapestry-Liferay-portlets Webapp</name>
 
@@ -45,7 +45,13 @@
 		<dependency>
 			<groupId>org.got5</groupId>
 			<artifactId>tapestry5-jquery</artifactId>
-			<version>4.0.1-SNAPSHOT</version>
+			<version>4.0-beta-35-SNAPSHOT</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.got5</groupId>
+			<artifactId>tapestry5-jquery-upload</artifactId>
+			<version>4.0-beta-35-SNAPSHOT</version>
 		</dependency>
 
 		<!-- dependency> <groupId>org.got5</groupId> <artifactId>tapestry5-highcharts</artifactId> 
@@ -321,29 +327,33 @@
 	<repositories>
 
 		<repository>
-			<id>devlab722-repo snapshot</id>
-			<url>http://nexus.devlab722.net/nexus/content/repositories/snapshots
-	        </url>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
+			<id>Apache Staging</id>
+			<url>https://repository.apache.org/content/groups/staging</url>
 		</repository>
-		
 		<repository>
-			<id>devlab722-repo releases</id>
-			<url>http://nexus.devlab722.net/nexus/content/repositories/releasess
-	        </url>
+			<id>central</id>
+			<name>Maven Repository</name>
+			<layout>default</layout>
+			<url>http://central.maven.org/maven2/</url>
 			<snapshots>
 				<enabled>false</enabled>
 			</snapshots>
 		</repository>
+		<repository>
+			<id>oss—sonatype-snapshot-repo</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots
+			</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+		</repository>
 	</repositories>
 
 	<properties>
-		<global.version>5.4-beta-26</global.version>
-		<tapestry-release-version>5.4-beta-26</tapestry-release-version>
-		<liferay.version>6.1.2</liferay.version>
-		<outputDirectory>C:/Liferay/6.1.2/6.1.2-ce-ga3/deploy</outputDirectory>
+		<global.version>5.4-beta-35</global.version>
+		<tapestry-release-version>5.4-beta-35</tapestry-release-version>
+		<liferay.version>6.2.3</liferay.version>
+		<outputDirectory>C:/Liferay/6.2-ga4/deploy</outputDirectory>
 	</properties>
 
 </project>
