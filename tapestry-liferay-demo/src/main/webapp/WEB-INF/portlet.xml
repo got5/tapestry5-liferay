@@ -429,6 +429,33 @@
 		</container-runtime-option>
 	</portlet>
 	
+<portlet>
+	<portlet-name>DownloadPage</portlet-name>
+	<portlet-class>org.apache.tapestry5.portlet.ApplicationPortlet</portlet-class>
+	<supports>
+		<mime-type>text/html</mime-type>
+		<portlet-mode>VIEW</portlet-mode>
+		<!-- <portlet-mode>EDIT</portlet-mode> -->
+	</supports>
+	<supports>
+		<mime-type>text/csv</mime-type>
+		<portlet-mode>VIEW</portlet-mode>
+		<!-- <portlet-mode>EDIT</portlet-mode> -->
+	</supports>
+	<portlet-info>
+		<title>DownloadPage Portlet</title>
+		<short-title>DownloadPage Portlet</short-title>
+		<keywords>DownloadPage Portlet</keywords>
+	</portlet-info>
+	<security-role-ref>
+		<role-name>user</role-name>
+	</security-role-ref>
+	<container-runtime-option>
+		<name>javax.portlet.renderHeaders</name>
+		<value>true</value>
+		</container-runtime-option>
+	</portlet>
+	
 	<event-definition >
 		<name>addToBasket</name>
 		<value-type>java.lang.Long</value-type>

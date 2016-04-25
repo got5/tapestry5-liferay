@@ -1,0 +1,16 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
+
+<body>
+	<div>
+
+    		<fieldset id="downoald1">
+				<p><t:eventlink t:event="downloadEvent">Download File</t:eventlink></p>
+				<p><t:eventlink t:event="serveresource">Download File</t:eventlink></p>
+			</fieldset>
+
+	</div>
+
+</body>
+
+</html>
+	
