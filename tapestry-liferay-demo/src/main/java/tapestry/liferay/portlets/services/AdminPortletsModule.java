@@ -2,6 +2,7 @@ package tapestry.liferay.portlets.services;
 
 import java.util.List;
 
+import org.apache.tapestry5.EventConstants;
 import org.apache.tapestry5.SymbolConstants;
 import org.apache.tapestry5.internal.grid.CollectionGridDataSource;
 import org.apache.tapestry5.ioc.Configuration;
@@ -11,8 +12,8 @@ import org.apache.tapestry5.ioc.internal.util.CollectionFactory;
 import org.apache.tapestry5.portlet.DeclaredResourceResponseSender;
 import org.apache.tapestry5.portlet.PortletPersistenceConstants;
 import org.apache.tapestry5.portlet.services.PortletModule;
+import org.apache.tapestry5.portlet.services.PortletResourceRequestFilter;
 import org.apache.tapestry5.portlet.upload.services.PortletUploadModule;
-
 import org.apache.tapestry5.services.ApplicationStateContribution;
 import org.apache.tapestry5.services.ApplicationStateCreator;
 import org.slf4j.Logger;
@@ -21,10 +22,9 @@ import tapestry.liferay.portlets.data.Celebrity.IDataSource;
 import tapestry.liferay.portlets.data.Celebrity.MockDataSource;
 import tapestry.liferay.portlets.data.kawwa2.BasketDetails;
 import tapestry.liferay.portlets.data.kawwa2.Product;
-
+import tapestry.liferay.portlets.pages.DownloadPage;
 import tapestry.liferay.portlets.pages.jquery.BindExample;
 
-import org.apache.tapestry5.portlet.services.PortletResourceRequestFilter;
 import org.apache.tapestry5.ioc.OrderedConfiguration;
 import org.got5.tapestry5.jquery.services.AjaxUploadDecoder;
 
@@ -52,6 +52,9 @@ public class AdminPortletsModule {
 		DeclaredResourceResponseSender bindExample = new DeclaredResourceResponseSender(BindExample.class.getName());
 			bindExample.addEvent("bindEvent");
 		configuration.add(bindExample);
+		DeclaredResourceResponseSender downloadExample = new DeclaredResourceResponseSender(DownloadPage.class.getName());
+		downloadExample.addEvent("downloadEvent");
+		configuration.add(downloadExample);
 
 		
 
