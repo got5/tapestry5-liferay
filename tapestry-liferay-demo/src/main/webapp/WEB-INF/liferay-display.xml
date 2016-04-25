@@ -20,5 +20,6 @@
         <portlet id="HighCharts"></portlet>
         <portlet id="DataTable"></portlet>
         <portlet id="AjaxFormLoopExample"></portlet>
+        <portlet id="DownloadPage"></portlet>
 	</category>
 </display>

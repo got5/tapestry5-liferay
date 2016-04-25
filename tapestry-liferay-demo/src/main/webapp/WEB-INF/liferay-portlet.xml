@@ -256,6 +256,16 @@
 		<private-request-attributes>false</private-request-attributes>
 				
 	</portlet>
+	
+	<portlet>
+		<portlet-name>DownloadPage</portlet-name>
+		<!-- Enable container redirect-after-posts -->
+		<action-url-redirect>true</action-url-redirect>
+		<!-- Allows to add multiple instance for a portlet -->
+		<instanceable>true</instanceable>
+		<!-- Important, if true then all the js and css files will be in the body instead of the header -->
+		<private-request-attributes>false</private-request-attributes>
+	</portlet>
 
 	<role-mapper>
 		<role-name>administrator</role-name>
