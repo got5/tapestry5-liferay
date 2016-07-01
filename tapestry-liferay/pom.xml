@@ -8,7 +8,7 @@
 	<parent>
 		   <groupId>org.apache.tapestry</groupId>
 		   <artifactId>tapestry5-portlet-globals</artifactId>
-		   <version>5.4.0</version>
+		   <version>5.4.1.0</version>
 	</parent>
 	<name>Tapestry5 Portlet 2.0 Liferay helpers</name>
 	<dependencies>
@@ -457,8 +457,8 @@
 </profiles>
 
 	<properties>
-		<global.version>5.4.0</global.version>
-		<tapestry-release-version>5.4.0</tapestry-release-version>
+		<global.version>5.4.1.0</global.version>
+		<tapestry-release-version>5.4.1</tapestry-release-version>
 		<pluto.version>2.0.2</pluto.version>
 		<liferay.version>6.2.3</liferay.version>
 		<liferay.home.dir>C:/Liferay/6.2-ga4</liferay.home.dir>
