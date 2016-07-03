@@ -9,7 +9,7 @@
 	<parent>
 		<groupId>org.apache.tapestry</groupId>
 		<artifactId>tapestry5-portlet-globals</artifactId>
-		<version>5.4.0</version>
+		<version>5.4.1.0</version>
 	</parent>
 	<name>Tapestry-Liferay-portlets Webapp</name>
 
@@ -350,8 +350,8 @@
 	</repositories>
 
 	<properties>
-		<global.version>5.4.0</global.version>
-		<tapestry-release-version>5.4.0</tapestry-release-version>
+		<global.version>5.4.1.0</global.version>
+		<tapestry-release-version>5.4.1</tapestry-release-version>
 		<liferay.version>6.2.3</liferay.version>
 		<outputDirectory>C:/Liferay/6.2-ga4/deploy</outputDirectory>
 	</properties>
